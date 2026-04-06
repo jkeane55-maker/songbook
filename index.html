@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>🎸 My Songbook</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; } :root { --bg:#1a1a1a; --surface:#252525; --border:#383838; --accent:#e8a030; --text:#e8e8e8; --muted:#888; --chord:#7ec8e3; --font-body:'Georgia',serif; --font-mono:'Courier New','Lucida Console',monospace; } html, body { background: var(--bg); overflow-x: clip; max-width: 100%; touch-action: pan-y; } body { color: var(--text); font-family: var(--font-body); font-size: 17px; line-height: 1.7; min-height: 100vh; -webkit-overflow-scrolling: touch; } #top-bar { position: sticky; top: 0; z-index: 100; background: #111; border-bottom: 2px solid var(--accent); padding: 12px 16px; display: flex; align-items: center; gap: 12px; } #top-bar h1 { font-size: 1.1rem; font-weight: bold; color: var(--accent); white-space: nowrap; letter-spacing: 0.02em; flex: 1; } #search-wrap { padding: 16px; } #search-input { width: 100%; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 0.95rem; padding: 10px 12px; outline: none; } #search-input:focus { border-color: var(--accent); } #search-input::placeholder { color: var(--muted); } #songs { padding: 4px 16px 60px; } .song-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 14px; overflow: hidden; } .song-card summary { list-style: none; cursor: pointer; padding: 16px 18px; display: flex; align-items: center; gap: 10px; } .song-card summary::-webkit-details-marker { display: none; } .song-card summary::before { content: "▶"; color: var(--accent); font-size: 0.8rem; flex-shrink: 0; transition: transform 0.15s ease; } .song-card[open] summary::before { transform: rotate(90deg); } .song-title-line { display:flex; flex-direction:column; min-width:0; } .song-title-line strong { color: var(--text); font-size: 1rem; line-height: 1.3; } .song-title-line span { color: var(--muted); font-size: 0.88rem; } .song-body { border-top: 1px solid var(--border); } .song { padding: 24px 16px 60px; } .song-header { margin-bottom: 20px; } .song-title { font-size: 1.5rem; font-weight: bold; color: var(--accent); line-height: 1.2; } .song-artist { font-size: 1rem; color: var(--muted); margin-top: 4px; } .song-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; } .tag { background: var(--bg); border: 1px solid var(--border); border-radius: 20px; padding: 3px 10px; font-size: 0.78rem; color: var(--muted); } .tag.key { color: var(--chord); border-color: var(--chord); } .song-content { font-family: var(--font-mono); font-size: 0.93rem; } .chord-line { color: var(--chord); font-weight: bold; display: block; margin: 6px 0; } .lyric-line { display: block; margin-bottom: 0.5em; color: var(--text); white-space: normal; word-wrap: break-word; line-height: 1.5; } .c { display: inline-block; position: relative; padding-top: 1.3em; vertical-align: bottom; line-height: 1.5; } .c::before { content: attr(data-chord); position: absolute; top: 0; left: 0; color: var(--chord); font-weight: bold; font-size: 0.88em; white-space: nowrap; line-height: 1; } .section-label { display: block; color: var(--accent); font-family: var(--font-body); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 22px; margin-bottom: 6px; } .tab-block { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; font-family: var(--font-mono); font-size: 0.82rem; line-height: 1.5; color: #b8d4c0; white-space: pre; overflow-x: auto; margin: 16px 0; -webkit-overflow-scrolling: touch; } .hidden-song { display:none !important; }
+</style>
+</head>
+<body>
+<div id="top-bar"><h1>🎸 My Songbook</h1></div>
+<div id="search-wrap"><input id="search-input" type="search" placeholder="Search songs or artist…"></div>
+<div id="songs">
+<details class="song-card" data-title="the needle and the damage done" data-artist="neil young">
+<summary><div class="song-title-line"><strong>The Needle and the Damage Done</strong><span>Neil Young</span></div></summary>
+<div class="song-body"><div class="view" id="song-needle">
+<section class="song">
+<div class="song-header">
+<div class="song-title">The Needle and the Damage Done</div>
+<div class="song-artist">Neil Young</div>
+<div class="song-meta">
+<span class="tag key">Key: D</span>
+<span class="tag">Tuning: Standard</span>
+</div>
+</div>
+<div class="song-content">
+<span class="section-label">[Intro]</span>
+<span class="chord-line">D  C Cadd9  G  Gm  B♭  C F  Esus4  E (2x)</span>
+
+<span class="section-label">[Verse 1]</span>
+<p class="lyric-line"><span class="c" data-chord="D">I</span> caught you knocking at my <span class="c" data-chord="C">cellar</span> <span class="c" data-chord="Cadd9">door</span></p>
+<p class="lyric-line"><span class="c" data-chord="G">I</span> love you, baby, can I <span class="c" data-chord="Gm">have</span> some <span class="c" data-chord="B♭">more</span></p>
+<p class="lyric-line"><span class="c" data-chord="C">Ooh,</span> <span class="c" data-chord="F">ooh,</span> the damage
+<span class="c" data-chord="Esus4">done.</span>
+<span class="c" data-chord="E">&nbsp;</span></p>
+
+<span class="section-label">[Verse 2]</span>
+<p class="lyric-line"><span class="c" data-chord="D">I</span> hit the city and I <span class="c" data-chord="C">lost</span> my
+<span class="c" data-chord="Cadd9">band</span></p>
+<p class="lyric-line"><span class="c" data-chord="G">I</span> watched the needle take <span class="c" data-chord="Gm">another</span> <span class="c" data-chord="B♭">man</span></p>
+<p class="lyric-line"><span class="c" data-chord="C">Gone,</span> <span class="c" data-chord="F">gone,</span> the damage
+<span class="c" data-chord="Esus4">done.</span>
+<span class="c" data-chord="E">&nbsp;</span></p>
+
+<span class="section-label">[Instrumental]</span>
+<span class="chord-line">D  C Cadd9  G  Gm  B♭  C F  Esus4  E</span>
+
+<span class="section-label">[Verse 3]</span>
+<p class="lyric-line"><span class="c" data-chord="D">I</span> sing the song because I <span class="c" data-chord="C">love</span> the <span class="c" data-chord="Cadd9">man</span></p>
+<p class="lyric-line"><span class="c" data-chord="G">I</span> know that some of you don't <span class="c" data-chord="Gm">under</span><span class="c" data-chord="B♭">stand</span></p>
+<p class="lyric-line"><span class="c" data-chord="C">Milk-</span><span class="c" data-chord="F">blood</span> to keep from
+<span class="c" data-chord="Esus4">running</span>
+<span class="c" data-chord="E">out.</span></p>
+
+<span class="section-label">[Verse 4]</span>
+<p class="lyric-line"><span class="c" data-chord="D">I've</span> seen the needle and the <span class="c" data-chord="C">damage</span> <span class="c" data-chord="Cadd9">done</span></p>
+<p class="lyric-line"><span class="c" data-chord="G">A</span> little part of it in <span class="c" data-chord="Gm">every</span><span class="c" data-chord="B♭">one</span></p>
+<p class="lyric-line"><span class="c" data-chord="C">But</span> every junkie's like a <span class="c" data-chord="F">setting</span> <span class="c" data-chord="Esus4">sun.</span> <span class="c" data-chord="E">&nbsp;</span></p>
+
+<span class="section-label">[Outro]</span>
+<span class="chord-line">D  C Cadd9  G  Gm  B♭</span>
+</div>
+</section>
+</div></div>
+</details>
+<details class="song-card" data-title="wonderwall" data-artist="oasis">
+<summary><div class="song-title-line"><strong>Wonderwall</strong><span>Oasis</span></div></summary>
+<div class="song-body"><div class="view" id="song-wonderwall">
+<section class="song">
+<div class="song-header">
+<div class="song-title">Wonderwall</div>
+<div class="song-artist">Oasis</div>
+<div class="song-meta">
+<span class="tag key">Key: Em (capo 2)</span>
+<span class="tag">Tuning: Standard</span>
+</div>
+</div>
+<div class="tab-block">Em7 G      Dsus4  A7sus4  Cadd9 022030 320033 xx0233 x02030  x32030</div>
+<div class="song-content">
+<span class="section-label">[Intro]</span>
+<span class="chord-line">Em7  G  Dsus4  A7sus4  (x2)</span>
+
+<span class="section-label">[Verse 1]</span>
+<p class="lyric-line"><span class="c" data-chord="Em7">Today</span> is
+<span class="c" data-chord="G">gonna</span>
+be the day</p>
+<p class="lyric-line">That they're <span class="c" data-chord="Dsus4">gonna</span>
+throw it back to <span class="c" data-chord="A7sus4">you,</span></p>
+<p class="lyric-line"><span class="c" data-chord="Em7">By</span> now you
+<span class="c" data-chord="G">should</span> of somehow</p>
+<p class="lyric-line"><span class="c" data-chord="Dsus4">Realised</span>
+what you gotta <span class="c" data-chord="A7sus4">do.</span></p>
+<p class="lyric-line"><span class="c" data-chord="Em7">I</span> don't believe that <span class="c" data-chord="G">anybody</span></p>
+<p class="lyric-line"><span class="c" data-chord="Dsus4">feels</span> the way I <span class="c" data-chord="A7sus4">do</span></p>
+<p class="lyric-line">About you <span class="c" data-chord="Em7">now.</span></p>
+<span class="chord-line">G  Dsus4 A7sus4</span>
+
+<span class="section-label">[Verse 2]</span>
+<p class="lyric-line"><span class="c" data-chord="Em7">Back</span> beat, the
+<span class="c" data-chord="G">word</span> is on the street</p>
+<p class="lyric-line">That the <span class="c" data-chord="Dsus4">fire</span> in your heart is <span class="c" data-chord="A7sus4">out,</span></p>
+<p class="lyric-line"><span class="c" data-chord="Em7">I'm</span> sure you've
+<span class="c" data-chord="G">heard</span> it all before,</p>
+<p class="lyric-line">But you <span class="c" data-chord="Dsus4">never</span> really had a <span class="c" data-chord="A7sus4">doubt.</span></p>
+<p class="lyric-line"><span class="c" data-chord="Em7">I</span> don't believe that <span class="c" data-chord="G">anybody</span></p>
+<p class="lyric-line"><span class="c" data-chord="Dsus4">feels</span> the way I <span class="c" data-chord="A7sus4">do</span></p>
+<p class="lyric-line">About you <span class="c" data-chord="Em7">now.</span></p>
+<span class="chord-line">G  Dsus4 A7sus4</span>
+
+<span class="section-label">[Bridge]</span>
+<p class="lyric-line">And <span class="c" data-chord="Cadd9">all</span> the roads we <span class="c" data-chord="Dsus4">have</span> to walk are <span class="c" data-chord="Em7">winding</span></p>
+<p class="lyric-line">And <span class="c" data-chord="Cadd9">all</span> the lights that <span class="c" data-chord="Dsus4">lead</span> us there are <span class="c" data-chord="Em7">blinding</span></p>
+<p class="lyric-line"><span class="c" data-chord="Cadd9">There</span> are many
+<span class="c" data-chord="Dsus4">things</span> that I would <span class="c" data-chord="G">like</span> to <span class="c" data-chord="Dsus4/F♯">say</span>
+to <span class="c" data-chord="Em7">you</span></p>
+<p class="lyric-line">But I don't know
+<span class="c" data-chord="A7sus4">how.</span></p>
+
+<span class="section-label">[Chorus]</span>
+<p class="lyric-line">Because <span class="c" data-chord="Cadd9">maybe</span></p>
+<span class="chord-line">Em7  G  Em7</span>
+<p class="lyric-line">You're gonna be the one that <span class="c" data-chord="Cadd9">saves</span> me</p>
+<span class="chord-line">Em7  Dsus4</span>
+<p class="lyric-line">And after <span class="c" data-chord="Cadd9">all</span></p>
+<span class="chord-line">Em7  Dsus4</span>
+<p class="lyric-line"><span class="c" data-chord="Em7">You're</span> my
+<span class="c" data-chord="Cadd9">wonderwall</span></p>
+<span class="chord-line">Em7  G  A7sus4</span>
+
+<span class="section-label">[Verse 3]</span>
+<p class="lyric-line"><span class="c" data-chord="Em7">Today</span> was
+<span class="c" data-chord="G">gonna</span>
+be the day,</p>
+<p class="lyric-line">But they'll <span class="c" data-chord="Dsus4">never</span> throw it back to <span class="c" data-chord="A7sus4">you,</span></p>
+<p class="lyric-line"><span class="c" data-chord="Em7">By</span> now you
+<span class="c" data-chord="G">should</span> of somehow</p>
+<p class="lyric-line"><span class="c" data-chord="Dsus4">Realised</span>
+what you gotta <span class="c" data-chord="A7sus4">do.</span></p>
+<p class="lyric-line"><span class="c" data-chord="Em7">I</span> don't believe that <span class="c" data-chord="G">anybody</span></p>
+<p class="lyric-line"><span class="c" data-chord="Dsus4">feels</span> the way I <span class="c" data-chord="A7sus4">do</span></p>
+<p class="lyric-line">About you <span class="c" data-chord="Em7">now.</span></p>
+<span class="chord-line">G  Dsus4 A7sus4</span>
+
+<span class="section-label">[Bridge]</span>
+<p class="lyric-line">And <span class="c" data-chord="Cadd9">all</span> the roads we <span class="c" data-chord="Dsus4">have</span> to walk are <span class="c" data-chord="Em7">winding</span></p>
+<p class="lyric-line">And <span class="c" data-chord="Cadd9">all</span> the lights that <span class="c" data-chord="Dsus4">lead</span> us there are <span class="c" data-chord="Em7">blinding</span></p>
+<p class="lyric-line"><span class="c" data-chord="Cadd9">There</span> are many
+<span class="c" data-chord="Dsus4">things</span> that I would <span class="c" data-chord="G">like</span> to <span class="c" data-chord="Dsus4/F♯">say</span>
+to <span class="c" data-chord="Em7">you</span></p>
+<p class="lyric-line">But I don't know
+<span class="c" data-chord="A7sus4">how.</span></p>
+
+<span class="section-label">[Chorus]</span>
+<p class="lyric-line">Because <span class="c" data-chord="Cadd9">maybe</span></p>
+<span class="chord-line">Em7  G  Em7</span>
+<p class="lyric-line">You're gonna be the one that <span class="c" data-chord="Cadd9">saves</span> me</p>
+<span class="chord-line">Em7  Dsus4</span>
+<p class="lyric-line">And after <span class="c" data-chord="Cadd9">all</span></p>
+<span class="chord-line">Em7  G  Em7</span>
+<p class="lyric-line"><span class="c" data-chord="Em7">You're</span> my
+<span class="c" data-chord="Cadd9">wonderwall</span></p>
+<span class="chord-line">Em7  G  Em7</span>
+
+<span class="section-label">[Outro]</span>
+<p class="lyric-line">Because <span class="c" data-chord="Cadd9">maybe</span></p>
+<span class="chord-line">Em7  G  Em7</span>
+<p class="lyric-line">You're gonna be the one that <span class="c" data-chord="Cadd9">saves</span> me</p>
+<span class="chord-line">Em7  Dsus4</span>
+<p class="lyric-line">And <span class="c" data-chord="Em7">after</span> <span class="c" data-chord="Cadd9">all</span></p>
+<span class="chord-line">Em7  G  Em7</span>
+<p class="lyric-line"><span class="c" data-chord="Em7">You're</span> my
+<span class="c" data-chord="Cadd9">wonderwall</span></p>
+<span class="chord-line">Em7  G  Em7</span>
+</div>
+</section>
+</div></div>
+</details>
+
+<details class="song-card" data-title="old man" data-artist="neil young">
+<summary><div class="song-title-line"><strong>Old Man</strong><span>Neil Young</span></div></summary>
+<div class="song-body"><div class="view" id="song-old-man">
+<section class="song">
+<div class="song-header">
+<div class="song-title">Old Man</div>
+<div class="song-artist">Neil Young</div>
+<div class="song-meta">
+<span class="tag key">Key: D</span>
+<span class="tag">Tuning: Standard</span>
+</div>
+</div>
+<div class="song-content">
+<span class="section-label">[Intro]</span>
+<span class="chord-line">D  Fmaj7 C  G  D Fmaj7  C  Fmaj7/C</span>
+
+<span class="section-label">[Verse 1]</span>
+<p class="lyric-line"><span class="c" data-chord="D">Old</span> man <span class="c" data-chord="Fmaj7">look</span> at my life, <span class="c" data-chord="C">Twenty</span>
+four and there's <span class="c" data-chord="G">so</span> much more</p>
+<p class="lyric-line"><span class="c" data-chord="D">Live</span> alone in a
+<span class="c" data-chord="Fmaj7">paradise</span> That <span class="c" data-chord="C">makes</span> me think of
+<span class="c" data-chord="Fmaj7/C">two.</span></p>
+<p class="lyric-line"><span class="c" data-chord="D">Love</span> lost,
+<span class="c" data-chord="Fmaj7">such</span>
+a cost, <span class="c" data-chord="C">Give</span>
+me things that <span class="c" data-chord="G">don't</span> get lost.</p>
+<p class="lyric-line"><span class="c" data-chord="D">Like</span> a coin that
+<span class="c" data-chord="C">won't</span> get tossed <span class="c" data-chord="Fmaj7/C">Rolling</span>
+home to <span class="c" data-chord="G">you.</span></p>
+
+<span class="section-label">[Break]</span>
+<span class="chord-line">D  C/E  Em G</span>
+
+<span class="section-label">[Chorus]</span>
+<p class="lyric-line"><span class="c" data-chord="D">Old</span> man take a look at my life I'm a <span class="c" data-chord="C/E">lot</span> like <span class="c" data-chord="Em7">you</span> <span class="c" data-chord="G">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="D">I</span> need someone to love me the <span class="c" data-chord="C/E">whole</span> day <span class="c" data-chord="Em7">through</span> <span class="c" data-chord="G">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="D">Just</span> one look in my eyes and you can <span class="c" data-chord="C/E">tell</span> that's <span class="c" data-chord="Em7">true</span> <span class="c" data-chord="G">&nbsp;</span></p>
+<span class="chord-line">D  Fmaj7 C  G</span>
+
+<span class="section-label">[Verse 2]</span>
+<p class="lyric-line"><span class="c" data-chord="D">Lullabies,</span>
+<span class="c" data-chord="Fmaj7">look</span>
+in your eyes, <span class="c" data-chord="C">Run</span>
+around the <span class="c" data-chord="G">same</span> old town.</p>
+<p class="lyric-line"><span class="c" data-chord="D">Doesn't</span> mean that
+<span class="c" data-chord="Fmaj7">much</span>
+to me To <span class="c" data-chord="C">mean</span>
+that much to <span class="c" data-chord="Fmaj7/C">you.</span></p>
+<p class="lyric-line"><span class="c" data-chord="D">I've</span> been <span class="c" data-chord="Fmaj7">first</span> and last
+<span class="c" data-chord="C">Look</span> at how the <span class="c" data-chord="G">time</span> goes past.</p>
+<p class="lyric-line"><span class="c" data-chord="D">But</span> I'm all a
+<span class="c" data-chord="C">lone</span> at last. <span class="c" data-chord="Fmaj7/C">Rolling</span>
+home to <span class="c" data-chord="G">you.</span></p>
+
+<span class="section-label">[Break]</span>
+<span class="chord-line">D  C/E  Em G</span>
+
+<span class="section-label">[Chorus]</span>
+<p class="lyric-line"><span class="c" data-chord="D">Old</span> man take a look at my life I'm a <span class="c" data-chord="C/E">lot</span> like <span class="c" data-chord="Em7">you</span> <span class="c" data-chord="G">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="D">I</span> need someone to love me the <span class="c" data-chord="C/E">whole</span> day <span class="c" data-chord="Em7">through</span> <span class="c" data-chord="G">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="D">Just</span> one look in my eyes and you can <span class="c" data-chord="C/E">tell</span> that's <span class="c" data-chord="G">true</span></p>
+<span class="chord-line">Dm7  D</span>
+
+<span class="section-label">[Outro]</span>
+<p class="lyric-line"><span class="c" data-chord="Dm7">Old</span> man look at my life, I'm a lot like <span class="c" data-chord="D">you</span> were… (x2)</p>
+<p class="lyric-line"><span class="c" data-chord="Dm7">Old</span> man, old man… <span class="c" data-chord="D">Old</span>
+man, old man… (x3)</p>
+<p class="lyric-line"><span class="c" data-chord="Dm7">Old</span> man take a look at my life I'm a lot like <span class="c" data-chord="D">you</span> were… (x2)</p>
+<span class="chord-line">Fmaj7  C  G  D</span>
+</div>
+</section>
+</div></div>
+</details>
+
+<details class="song-card" data-title="cortez the killer" data-artist="neil young">
+<summary><div class="song-title-line"><strong>Cortez the Killer</strong><span>Neil Young</span></div></summary>
+<div class="song-body"><div class="view" id="song-cortez-the-killer">
+<section class="song">
+<div class="song-header">
+<div class="song-title">Cortez the Killer</div>
+<div class="song-artist">Neil Young</div>
+<div class="song-meta">
+<span class="tag key">Key: Em (Drop D tuning)</span>
+<span class="tag">Tuning: Drop D (DADGBE)</span>
+</div>
+</div>
+<div class="song-content">
+<span class="section-label">[Main Riff / Throughout]</span>
+<span class="chord-line">Em7  D  C  D (repeating)</span>
+
+<span class="section-label">[Verse 1]</span>
+<p class="lyric-line"><span class="c" data-chord="Em7">He</span> came dancing across the <span class="c" data-chord="D">water</span></p>
+<p class="lyric-line"><span class="c" data-chord="C">Cortez, Cortez,</span>
+what a <span class="c" data-chord="D">killer</span></p>
+<p class="lyric-line"><span class="c" data-chord="Em7">He</span> came dancing across the <span class="c" data-chord="D">water</span></p>
+<p class="lyric-line"><span class="c" data-chord="C">With his galleons and his</span> <span class="c" data-chord="D">guns</span></p>
+<p class="lyric-line"><span class="c" data-chord="Em7">Looking</span> for the new <span class="c" data-chord="D">world</span></p>
+<p class="lyric-line"><span class="c" data-chord="C">In that palace in the</span> <span class="c" data-chord="D">sun</span></p>
+
+<span class="section-label">[Verse 2]</span>
+<p class="lyric-line"><span class="c" data-chord="Em7">On</span> the shore lay Montezuma</p>
+<p class="lyric-line">With his coca leaves and <span class="c" data-chord="D">pearls</span></p>
+<p class="lyric-line"><span class="c" data-chord="C">In his halls he often</span> <span class="c" data-chord="D">wondered</span></p>
+<p class="lyric-line"><span class="c" data-chord="Em7">With</span> the secrets of the <span class="c" data-chord="D">worlds</span></p>
+<p class="lyric-line"><span class="c" data-chord="C">And his subjects gathered</span> <span class="c" data-chord="D">round</span> him</p>
+<p class="lyric-line"><span class="c" data-chord="Em7">Like</span> the leaves around a <span class="c" data-chord="D">tree</span></p>
+<p class="lyric-line"><span class="c" data-chord="C">And his daughters, they loved</span> <span class="c" data-chord="D">dancing</span></p>
+<p class="lyric-line"><span class="c" data-chord="Em7">And</span> they carried flowers for <span class="c" data-chord="D">free</span></p>
+
+<span class="section-label">[Verse 3]</span>
+<p class="lyric-line"><span class="c" data-chord="Em7">And</span> the women all were <span class="c" data-chord="D">beautiful</span></p>
+<p class="lyric-line"><span class="c" data-chord="C">And the men stood straight and</span> <span class="c" data-chord="D">strong</span></p>
+<p class="lyric-line"><span class="c" data-chord="Em7">They</span> offered life in <span class="c" data-chord="D">sacrifice</span></p>
+<p class="lyric-line"><span class="c" data-chord="C">So that others could go</span> <span class="c" data-chord="D">on</span></p>
+<p class="lyric-line"><span class="c" data-chord="Em7">Hate</span> was just a legend</p>
+<p class="lyric-line">And <span class="c" data-chord="D">war</span> was never known</p>
+<p class="lyric-line"><span class="c" data-chord="C">The people worked</span>
+<span class="c" data-chord="D">together</span></p>
+<p class="lyric-line"><span class="c" data-chord="Em7">And</span> they lifted many <span class="c" data-chord="D">stones</span></p>
+
+<span class="section-label">[Verse 4]</span>
+<p class="lyric-line"><span class="c" data-chord="Em7">They</span> carried them to the <span class="c" data-chord="D">pyramid</span></p>
+<p class="lyric-line"><span class="c" data-chord="C">And they put them on a</span> <span class="c" data-chord="D">top</span></p>
+<p class="lyric-line"><span class="c" data-chord="Em7">Watched</span> the turquoise <span class="c" data-chord="D">birds</span> fly</p>
+<p class="lyric-line"><span class="c" data-chord="C">Never wanting for a</span> <span class="c" data-chord="D">drop</span></p>
+
+<span class="section-label">[Verse 5]</span>
+<p class="lyric-line"><span class="c" data-chord="Em7">And</span> I know she's living <span class="c" data-chord="D">there</span></p>
+<p class="lyric-line"><span class="c" data-chord="C">And she loves me to this</span> <span class="c" data-chord="D">day</span></p>
+<p class="lyric-line"><span class="c" data-chord="Em7">I</span> still can't remember <span class="c" data-chord="D">when</span></p>
+<p class="lyric-line"><span class="c" data-chord="C">Or how I threw it all</span> <span class="c" data-chord="D">away</span></p>
+
+<span class="section-label">[Outro]</span>
+<span class="chord-line">Em7  D  C  D (repeat and fade)</span>
+</div>
+</section>
+</div></div>
+</details>
+
+<details class="song-card" data-title="going to california" data-artist="led zeppelin">
+<summary><div class="song-title-line"><strong>Going to California</strong><span>Led Zeppelin</span></div></summary>
+<div class="song-body"><div class="view" id="song-going-to-california">
+<section class="song">
+<div class="song-header">
+<div class="song-title">Going to California</div>
+<div class="song-artist">Led Zeppelin</div>
+<div class="song-meta">
+<span class="tag key">Key: D</span>
+<span class="tag">Tuning: Standard</span>
+</div>
+</div>
+<div class="song-content">
+<span class="section-label">[Intro]</span>
+<span class="chord-line">Dsus2  G/B  (fingerpicked, repeat)</span>
+
+<span class="section-label">[Verse 1]</span>
+<p class="lyric-line"><span class="c" data-chord="D">Spent</span> my days with a woman un<span class="c" data-chord="G/B">kind</span></p>
+<p class="lyric-line"><span class="c" data-chord="Am">Smoked</span> my stuff and drank <span class="c" data-chord="G/B">all</span> my wine</p>
+<p class="lyric-line"><span class="c" data-chord="D">We</span> laughed and sang with the whole damn <span class="c" data-chord="G/B">night</span></p>
+<p class="lyric-line"><span class="c" data-chord="Am">Woke</span> up in the morning, couldn't even <span class="c" data-chord="G/B">see</span> the light</p>
+
+<span class="section-label">[Verse 2]</span>
+<p class="lyric-line"><span class="c" data-chord="D">Made</span> up my mind to make a new <span class="c" data-chord="G/B">start</span></p>
+<p class="lyric-line"><span class="c" data-chord="Am">Going</span> to California with an <span class="c" data-chord="G/B">aching</span> in my heart</p>
+<p class="lyric-line"><span class="c" data-chord="D">Someone</span> told me there's a girl out <span class="c" data-chord="G/B">there</span></p>
+<p class="lyric-line"><span class="c" data-chord="Am">With</span> love in her eyes and <span class="c" data-chord="G/B">flowers</span> in her hair</p>
+
+<span class="section-label">[Verse 3]</span>
+<p class="lyric-line"><span class="c" data-chord="D">Took</span> my chances on a big jet <span class="c" data-chord="G/B">plane</span></p>
+<p class="lyric-line"><span class="c" data-chord="Am">Never</span> let 'em tell you that they're all the <span class="c" data-chord="G/B">same</span></p>
+<p class="lyric-line"><span class="c" data-chord="D">The</span> sea was red and the sky was <span class="c" data-chord="G/B">grey</span></p>
+<p class="lyric-line"><span class="c" data-chord="Am">Wondered</span> how tomorrow could ever <span class="c" data-chord="G/B">follow</span> today</p>
+
+<span class="section-label">[Verse 4]</span>
+<p class="lyric-line"><span class="c" data-chord="D">Mountains</span> and the canyons start to tremble and <span class="c" data-chord="G/B">shake</span></p>
+<p class="lyric-line"><span class="c" data-chord="Am">The</span> children of the sun begin to <span class="c" data-chord="G/B">awake</span></p>
+<p class="lyric-line"><span class="c" data-chord="D">Watch</span> out! The world's behind <span class="c" data-chord="G/B">you</span></p>
+<p class="lyric-line"><span class="c" data-chord="Am">There's</span> always someone around you who will <span class="c" data-chord="G/B">call</span></p>
+<p class="lyric-line">It's <span class="c" data-chord="D">nothing</span> at all</p>
+
+<span class="section-label">[Outro]</span>
+<span class="chord-line">Dsus2  G/B  (repeat and fade)</span>
+</div>
+</section>
+</div></div>
+</details>
+
+<details class="song-card" data-title="babe i'm gonna leave you" data-artist="led zeppelin">
+<summary><div class="song-title-line"><strong>Babe I'm Gonna Leave You</strong><span>Led Zeppelin</span></div></summary>
+<div class="song-body"><div class="view" id="song-babe-im-gonna-leave-you">
+<section class="song">
+<div class="song-header">
+<div class="song-title">Babe I'm Gonna Leave You</div>
+<div class="song-artist">Led Zeppelin</div>
+<div class="song-meta">
+<span class="tag key">Key: Am</span>
+<span class="tag">Tuning: Standard</span>
+</div>
+</div>
+<div class="song-content">
+<span class="section-label">[Intro]</span>
+<span class="chord-line">Am  Am7/G  D/F♯  D7/F♯  F E  (repeat)</span>
+
+<span class="section-label">[Verse 1]</span>
+<p class="lyric-line"><span class="c" data-chord="Am">Babe,</span> <span class="c" data-chord="Am7/G">baby,</span> <span class="c" data-chord="D/F♯">baby</span>
+I'm gonna leave <span class="c" data-chord="F">you</span> <span class="c" data-chord="E">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="Am">I</span> said <span class="c" data-chord="Am7/G">baby</span> you know I'm gonna <span class="c" data-chord="D/F♯">leave</span>
+you <span class="c" data-chord="F">&nbsp;</span> <span class="c" data-chord="E">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="Am">I'll</span> leave you when the <span class="c" data-chord="Am7/G">summertime</span></p>
+<p class="lyric-line"><span class="c" data-chord="D/F♯">Leave</span>
+you when the <span class="c" data-chord="F">summer</span> <span class="c" data-chord="E">comes</span> a-rollin'</p>
+<p class="lyric-line"><span class="c" data-chord="Am">Leave</span> you when the <span class="c" data-chord="Am7/G">summer</span> <span class="c" data-chord="D/F♯">comes</span>
+<span class="c" data-chord="F">&nbsp;</span> <span class="c" data-chord="E">&nbsp;</span></p>
+
+<span class="section-label">[Verse 2]</span>
+<p class="lyric-line"><span class="c" data-chord="Am">Babe,</span> <span class="c" data-chord="Am7/G">baby,</span> <span class="c" data-chord="D/F♯">baby</span>
+I don't wanna <span class="c" data-chord="F">leave</span> <span class="c" data-chord="E">you</span></p>
+<p class="lyric-line"><span class="c" data-chord="Am">I</span> ain't <span class="c" data-chord="Am7/G">joking</span> <span class="c" data-chord="D/F♯">woman</span>
+I got to <span class="c" data-chord="F">ramble</span> <span class="c" data-chord="E">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="Am">Oh,</span> yeah,
+<span class="c" data-chord="Am7/G">baby,</span>
+<span class="c" data-chord="D/F♯">baby,</span>
+I won't be <span class="c" data-chord="F">there</span> <span class="c" data-chord="E">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="Am">Really</span> got to
+<span class="c" data-chord="Am7/G">ramble</span></p>
+<p class="lyric-line"><span class="c" data-chord="D/F♯">I</span>
+can hear it <span class="c" data-chord="F">calling</span> me the <span class="c" data-chord="E">way</span> it used to do</p>
+<p class="lyric-line"><span class="c" data-chord="Am">I</span> can hear it
+<span class="c" data-chord="Am7/G">calling</span> me <span class="c" data-chord="D/F♯">back</span>
+home <span class="c" data-chord="F">&nbsp;</span> <span class="c" data-chord="E">&nbsp;</span></p>
+
+<span class="section-label">[Bridge — heavy section]</span>
+<span class="chord-line">Am  F G  Am  (driving rhythm, repeat)</span>
+
+<span class="section-label">[Verse 3]</span>
+<p class="lyric-line"><span class="c" data-chord="Am">Baby,</span> <span class="c" data-chord="Am7/G">baby,</span> <span class="c" data-chord="D/F♯">baby,</span>
+I don't wanna <span class="c" data-chord="F">leave</span> <span class="c" data-chord="E">you</span></p>
+<p class="lyric-line"><span class="c" data-chord="Am">I</span> ain't <span class="c" data-chord="Am7/G">joking</span> <span class="c" data-chord="D/F♯">woman</span>
+I got to <span class="c" data-chord="F">ramble</span> <span class="c" data-chord="E">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="Am">Babe,</span> I'm
+<span class="c" data-chord="Am7/G">gonna</span> <span class="c" data-chord="D/F♯">leave</span>
+<span class="c" data-chord="F">you</span>
+<span class="c" data-chord="E">&nbsp;</span></p>
+
+<span class="section-label">[Outro]</span>
+<span class="chord-line">Am  Am7/G  D/F♯  D7/F♯  F E  (repeat and fade)</span>
+</div>
+</section>
+</div></div>
+</details>
+
+<details class="song-card" data-title="three little birds" data-artist="bob marley">
+<summary><div class="song-title-line"><strong>Three Little Birds</strong><span>Bob Marley</span></div></summary>
+<div class="song-body"><div class="view" id="song-three-little-birds">
+<section class="song">
+<div class="song-header">
+<div class="song-title">Three Little Birds</div>
+<div class="song-artist">Bob Marley</div>
+<div class="song-meta">
+<span class="tag key">Key: A</span>
+<span class="tag">Tuning: Standard</span>
+</div>
+</div>
+<div class="song-content">
+<span class="section-label">[Intro]</span>
+<span class="chord-line">A  A  A  A</span>
+
+<span class="section-label">[Chorus]</span>
+<p class="lyric-line"><span class="c" data-chord="A">Don't</span> worry, about a thing</p>
+<p class="lyric-line">'Cause
+<span class="c" data-chord="D">every</span>
+little thing, gonna be al<span class="c" data-chord="A">right</span></p>
+<p class="lyric-line">Singin'
+<span class="c" data-chord="A">don't</span>
+worry, about a thing</p>
+<p class="lyric-line">'Cause
+<span class="c" data-chord="D">every</span>
+little thing, gonna be al<span class="c" data-chord="A">right</span></p>
+
+<span class="section-label">[Verse]</span>
+<p class="lyric-line"><span class="c" data-chord="A">Rise</span> up this mornin', smile with the <span class="c" data-chord="E">risin'</span>
+sun</p>
+<p class="lyric-line">Three little <span class="c" data-chord="D">birds</span> pitched by my <span class="c" data-chord="A">doorstep</span></p>
+<p class="lyric-line">Singin'
+<span class="c" data-chord="A">sweet</span>
+songs of melodies <span class="c" data-chord="E">pure</span> and true</p>
+<p class="lyric-line">Sayin', <span class="c" data-chord="D">this</span> is my message to <span class="c" data-chord="A">you-oo-oo</span></p>
+
+<span class="section-label">[Chorus]</span>
+<p class="lyric-line">Singin'
+<span class="c" data-chord="A">don't</span>
+worry, about a thing</p>
+<p class="lyric-line">'Cause
+<span class="c" data-chord="D">every</span>
+little thing, gonna be al<span class="c" data-chord="A">right</span></p>
+<p class="lyric-line">Singin'
+<span class="c" data-chord="A">don't</span>
+worry, about a thing</p>
+<p class="lyric-line">'Cause
+<span class="c" data-chord="D">every</span>
+little thing, gonna be al<span class="c" data-chord="A">right</span></p>
+<span class="chord-line">(Verse) (Chorus x3) Fade</span>
+</div>
+</section>
+</div></div>
+</details>
+
+<details class="song-card" data-title="no woman no cry" data-artist="bob marley">
+<summary><div class="song-title-line"><strong>No Woman, No Cry</strong><span>Bob Marley</span></div></summary>
+<div class="song-body"><div class="view" id="song-no-woman-no-cry">
+<section class="song">
+<div class="song-header">
+<div class="song-title">No Woman, No Cry</div>
+<div class="song-artist">Bob Marley</div>
+<div class="song-meta">
+<span class="tag key">Key: C</span>
+<span class="tag">Tuning: Standard</span>
+</div>
+</div>
+<div class="song-content">
+<span class="section-label">[Intro / Throughout]</span>
+<span class="chord-line">C  C/B  Am F  C  F  C G  (repeat)</span>
+
+<span class="section-label">[Chorus]</span>
+<p class="lyric-line"><span class="c" data-chord="C">No</span> woman, no
+<span class="c" data-chord="C/B">cry</span></p>
+<p class="lyric-line"><span class="c" data-chord="Am">No</span> woman, no
+<span class="c" data-chord="F">cry</span></p>
+<p class="lyric-line"><span class="c" data-chord="C">No</span> woman, no
+<span class="c" data-chord="F">cry</span></p>
+<p class="lyric-line"><span class="c" data-chord="C">No</span> woman, no
+<span class="c" data-chord="G">cry</span></p>
+
+<span class="section-label">[Verse 1]</span>
+<p class="lyric-line">Said, <span class="c" data-chord="C">I</span> remember when we used to <span class="c" data-chord="C/B">sit</span></p>
+<p class="lyric-line">In the <span class="c" data-chord="Am">government</span> yard in <span class="c" data-chord="F">Trenchtown</span></p>
+<p class="lyric-line"><span class="c" data-chord="C">Oba, ob-serving the</span> <span class="c" data-chord="C/B">hypocrites</span></p>
+<p class="lyric-line">As they would <span class="c" data-chord="Am">mingle</span> with the good <span class="c" data-chord="F">people</span> we meet</p>
+<p class="lyric-line"><span class="c" data-chord="C">Good</span> friends we have, oh <span class="c" data-chord="C/B">good</span> friends we have lost</p>
+<p class="lyric-line"><span class="c" data-chord="Am">Along</span> the
+<span class="c" data-chord="F">way</span></p>
+<p class="lyric-line">In this <span class="c" data-chord="C">great</span> future, you can't forget your <span class="c" data-chord="F">past</span></p>
+<p class="lyric-line">So <span class="c" data-chord="C">dry</span> your tears, I
+<span class="c" data-chord="G">say</span></p>
+
+<span class="section-label">[Verse 2]</span>
+<p class="lyric-line">Said, <span class="c" data-chord="C">I</span> remember when we used to <span class="c" data-chord="C/B">sit</span></p>
+<p class="lyric-line">In the <span class="c" data-chord="Am">government</span> yard in <span class="c" data-chord="F">Trenchtown</span></p>
+<p class="lyric-line">And then <span class="c" data-chord="C">Georgie</span> would make the fire <span class="c" data-chord="C/B">light</span></p>
+<p class="lyric-line">As it was <span class="c" data-chord="Am">log</span> wood burnin' through the <span class="c" data-chord="F">night</span></p>
+<p class="lyric-line">Then we would <span class="c" data-chord="C">cook</span> cornmeal
+<span class="c" data-chord="C/B">porridge</span></p>
+<p class="lyric-line">Of which I'll <span class="c" data-chord="Am">share</span> with
+<span class="c" data-chord="F">you</span></p>
+<p class="lyric-line">My <span class="c" data-chord="C">feet</span> is my only carriage</p>
+<p class="lyric-line">So I've got to push on
+<span class="c" data-chord="F">through</span></p>
+<p class="lyric-line">But while I'm <span class="c" data-chord="C">gone</span>, I mean…
+<span class="c" data-chord="G">&nbsp;</span></p>
+
+<span class="section-label">[Chorus]</span>
+<p class="lyric-line"><span class="c" data-chord="C">No</span> woman, no
+<span class="c" data-chord="C/B">cry</span></p>
+<p class="lyric-line"><span class="c" data-chord="Am">No</span> woman, no
+<span class="c" data-chord="F">cry</span></p>
+<p class="lyric-line"><span class="c" data-chord="C">Oh</span> my little sister, <span class="c" data-chord="F">don't</span> shed no tears</p>
+<p class="lyric-line"><span class="c" data-chord="C">No</span> woman, no
+<span class="c" data-chord="G">cry</span></p>
+</div>
+</section>
+</div></div>
+</details>
+
+<details class="song-card" data-title="is this love" data-artist="bob marley">
+<summary><div class="song-title-line"><strong>Is This Love</strong><span>Bob Marley</span></div></summary>
+<div class="song-body"><div class="view" id="song-is-this-love">
+<section class="song">
+<div class="song-header">
+<div class="song-title">Is This Love</div>
+<div class="song-artist">Bob Marley</div>
+<div class="song-meta">
+<span class="tag key">Key: A (F♯m)</span>
+<span class="tag">Tuning: Standard</span>
+</div>
+</div>
+<div class="song-content">
+<span class="section-label">[Intro]</span>
+<span class="chord-line">F♯m D  A  F♯m  D  A</span>
+
+<span class="section-label">[Verse 1]</span>
+<p class="lyric-line">I wanna
+<span class="c" data-chord="F♯m">love</span>
+you and <span class="c" data-chord="D">treat</span> you <span class="c" data-chord="A">right</span></p>
+<p class="lyric-line">I wanna
+<span class="c" data-chord="C♯m">love</span>
+you every <span class="c" data-chord="F♯m">day</span>
+and every <span class="c" data-chord="D">night</span> <span class="c" data-chord="A">&nbsp;</span></p>
+<p class="lyric-line">We'll be <span class="c" data-chord="C♯m">to</span><span class="c" data-chord="F♯m">gether</span> with a <span class="c" data-chord="D">roof</span> right over our <span class="c" data-chord="A">heads</span></p>
+<p class="lyric-line">We'll <span class="c" data-chord="C♯m">share</span>
+the <span class="c" data-chord="F♯m">shelter</span>
+<span class="c" data-chord="D">on</span> my single <span class="c" data-chord="A">bed</span></p>
+<p class="lyric-line">We'll <span class="c" data-chord="C♯m">share</span>
+the <span class="c" data-chord="F♯m">same</span>
+room, <span class="c" data-chord="D">Jah</span>
+provide the <span class="c" data-chord="A">bread</span></p>
+
+<span class="section-label">[Chorus]</span>
+<p class="lyric-line">Is this <span class="c" data-chord="C♯m">love, is this love, is this love, is this love that I'm</span> <span class="c" data-chord="Bm">feeling?</span></p>
+<p class="lyric-line">Is this <span class="c" data-chord="C♯m">love, is this love, is this love, is this love that I'm</span> <span class="c" data-chord="Bm">feeling?</span></p>
+<p class="lyric-line">Oohhh…
+<span class="chord-line" style="display:inline">C♯m D  E</span></p>
+<p class="lyric-line"><span class="c" data-chord="Dmaj7">I</span> wanna know, wanna know, wanna know <span class="c" data-chord="Bm">now</span></p>
+<p class="lyric-line">I'm willing and
+<span class="c" data-chord="Bm">able</span></p>
+<p class="lyric-line">So I <span class="c" data-chord="C♯m">throw</span>
+my cards on your <span class="c" data-chord="E">table</span></p>
+
+<span class="section-label">[Verse 2]</span>
+<p class="lyric-line">I wanna
+<span class="c" data-chord="F♯m">love</span>
+you, I wanna <span class="c" data-chord="D">love</span> and <span class="c" data-chord="A">treat</span> you <span class="c" data-chord="C♯m">right</span></p>
+<p class="lyric-line">I wanna love you every <span class="c" data-chord="D">day</span> and every <span class="c" data-chord="A">night</span></p>
+<p class="lyric-line">We'll be <span class="c" data-chord="C♯m">to</span><span class="c" data-chord="F♯m">gether</span> with a <span class="c" data-chord="D/F♯">roof</span>
+right over our <span class="c" data-chord="A">heads</span></p>
+<p class="lyric-line">We'll <span class="c" data-chord="C♯m">share</span>
+the <span class="c" data-chord="F♯m">shelter</span>
+<span class="c" data-chord="D/F♯">on</span>
+my single <span class="c" data-chord="A">bed</span></p>
+<p class="lyric-line">We'll <span class="c" data-chord="C♯m">share</span>
+the <span class="c" data-chord="F♯m">same</span>
+room, <span class="c" data-chord="D/F♯">Jah</span>
+provide the <span class="c" data-chord="A">bread</span></p>
+
+<span class="section-label">[Chorus]</span>
+<p class="lyric-line">Is this <span class="c" data-chord="C♯m">love, is this love, is this love, is this love that I'm</span> <span class="c" data-chord="Bm">feeling?</span></p>
+<p class="lyric-line">Is this <span class="c" data-chord="C♯m">love, is this love, is this love, is this love that I'm</span> <span class="c" data-chord="Bm">feeling?</span></p>
+<span class="chord-line">C♯m D  E  F♯m</span>
+</div>
+</section>
+</div></div>
+</details>
+
+<details class="song-card" data-title="knockin' on heaven's door" data-artist="bob dylan">
+<summary><div class="song-title-line"><strong>Knockin' on Heaven's Door</strong><span>Bob Dylan</span></div></summary>
+<div class="song-body"><div class="view" id="song-knockin-on-heavens-door">
+<section class="song">
+<div class="song-header">
+<div class="song-title">Knockin' on Heaven's Door</div>
+<div class="song-artist">Bob Dylan</div>
+<div class="song-meta">
+<span class="tag key">Key: G</span>
+<span class="tag">Tuning: Standard</span>
+</div>
+</div>
+<div class="song-content">
+<span class="section-label">[Intro]</span>
+<span class="chord-line">G  D Am7  Am7  G  D  C C</span>
+
+<span class="section-label">[Verse 1]</span>
+<p class="lyric-line"><span class="c" data-chord="G">Mama,</span>
+take this badge off of <span class="c" data-chord="D">me</span> <span class="c" data-chord="Am7">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="G">I</span> can't <span class="c" data-chord="D">use</span> it any<span class="c" data-chord="C">more</span> <span class="c" data-chord="C">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="G">It's</span> getting
+<span class="c" data-chord="D">dark,</span> too dark for me to <span class="c" data-chord="Am7">see</span>
+<span class="c" data-chord="Am7">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="G">I</span> feel I'm
+<span class="c" data-chord="D">knockin'</span>
+on heaven's <span class="c" data-chord="C">door</span> <span class="c" data-chord="C">&nbsp;</span></p>
+
+<span class="section-label">[Chorus]</span>
+<p class="lyric-line"><span class="c" data-chord="G">Knock,</span> knock,
+<span class="c" data-chord="D">knockin'</span>
+on heaven's <span class="c" data-chord="Am7">door</span> <span class="c" data-chord="Am7">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="G">Knock,</span> knock,
+<span class="c" data-chord="D">knockin'</span>
+on heaven's <span class="c" data-chord="C">door</span> <span class="c" data-chord="C">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="G">Knock,</span> knock,
+<span class="c" data-chord="D">knockin'</span>
+on heaven's <span class="c" data-chord="Am7">door</span> <span class="c" data-chord="Am7">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="G">Knock,</span> knock,
+<span class="c" data-chord="D">knockin'</span>
+on heaven's <span class="c" data-chord="C">door</span> <span class="c" data-chord="C">&nbsp;</span></p>
+
+<span class="section-label">[Verse 2]</span>
+<p class="lyric-line"><span class="c" data-chord="G">Mama,</span>
+put my guns in the <span class="c" data-chord="D">ground</span> <span class="c" data-chord="Am7">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="G">I</span> can't <span class="c" data-chord="D">shoot</span> them any<span class="c" data-chord="C">more</span>
+<span class="c" data-chord="C">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="G">That</span> long black
+<span class="c" data-chord="D">cloud</span> is comin' <span class="c" data-chord="Am7">down</span> <span class="c" data-chord="Am7">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="G">I</span> feel I'm
+<span class="c" data-chord="D">knockin'</span>
+on heaven's <span class="c" data-chord="C">door</span> <span class="c" data-chord="C">&nbsp;</span></p>
+
+<span class="section-label">[Chorus]</span>
+<p class="lyric-line"><span class="c" data-chord="G">Knock,</span> knock,
+<span class="c" data-chord="D">knockin'</span>
+on heaven's <span class="c" data-chord="Am7">door</span> <span class="c" data-chord="Am7">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="G">Knock,</span> knock,
+<span class="c" data-chord="D">knockin'</span>
+on heaven's <span class="c" data-chord="C">door</span> <span class="c" data-chord="C">&nbsp;</span></p>
+</div>
+</section>
+</div></div>
+</details>
+
+<details class="song-card" data-title="the times they are a-changin'" data-artist="bob dylan">
+<summary><div class="song-title-line"><strong>The Times They Are A-Changin'</strong><span>Bob Dylan</span></div></summary>
+<div class="song-body"><div class="view" id="song-the-times-they-are-a-changin">
+<section class="song">
+<div class="song-header">
+<div class="song-title">The Times They Are A-Changin'</div>
+<div class="song-artist">Bob Dylan</div>
+<div class="song-meta">
+<span class="tag key">Key: G</span>
+<span class="tag">Tuning: Standard</span>
+</div>
+</div>
+<div class="song-content">
+<span class="section-label">[Verse 1]</span>
+<p class="lyric-line">Come <span class="c" data-chord="G">gather</span> 'round
+<span class="c" data-chord="Em">people</span> wher<span class="c" data-chord="C">ever</span> you <span class="c" data-chord="G">roam</span></p>
+<p class="lyric-line">And ad<span class="c" data-chord="Gm">mit</span>
+that the <span class="c" data-chord="Em">waters</span> a<span class="c" data-chord="C">round</span> you have <span class="c" data-chord="D">grown</span></p>
+<p class="lyric-line">And ac<span class="c" data-chord="G">cept</span>
+it that <span class="c" data-chord="Em">soon</span> you'll be <span class="c" data-chord="C">drenched</span> to the
+<span class="c" data-chord="G">bone</span></p>
+<p class="lyric-line">If your <span class="c" data-chord="G">time</span> to <span class="c" data-chord="Em">you</span> is worth
+<span class="c" data-chord="D">savin'</span></p>
+<p class="lyric-line">Then you <span class="c" data-chord="Cadd9">better</span> start
+<span class="c" data-chord="Em7">swimmin'</span>
+or you'll <span class="c" data-chord="Cadd9">sink</span> like a <span class="c" data-chord="Em7">stone</span></p>
+<p class="lyric-line">For the <span class="c" data-chord="G">times,</span> they
+<span class="c" data-chord="C">are</span>
+a-<span class="c" data-chord="D">chan</span>-<span class="c" data-chord="G">gin'</span></p>
+
+<span class="section-label">[Verse 2]</span>
+<p class="lyric-line">Come <span class="c" data-chord="G">writers</span> and
+<span class="c" data-chord="Em">critics</span>
+who <span class="c" data-chord="C">prophesy</span>
+with your <span class="c" data-chord="G">pen</span></p>
+<p class="lyric-line">And keep your <span class="c" data-chord="Gm">eyes</span> wide the
+<span class="c" data-chord="Em">chance</span>
+won't <span class="c" data-chord="C">come</span>
+a<span class="c" data-chord="D">gain</span></p>
+<p class="lyric-line">And don't <span class="c" data-chord="G">speak</span> too <span class="c" data-chord="Em">soon</span> for the
+<span class="c" data-chord="C">wheel's</span>
+still in <span class="c" data-chord="G">spin</span></p>
+<p class="lyric-line">And there's no
+<span class="c" data-chord="G">tellin'</span>
+who that it's <span class="c" data-chord="D">namin'</span></p>
+<p class="lyric-line">For the <span class="c" data-chord="Cadd9">loser</span> now will be <span class="c" data-chord="Em7">later</span> to <span class="c" data-chord="Cadd9">win</span></p>
+<p class="lyric-line">For the <span class="c" data-chord="G">times,</span> they
+<span class="c" data-chord="C">are</span>
+a-<span class="c" data-chord="D">chan</span>-<span class="c" data-chord="G">gin'</span></p>
+
+<span class="section-label">[Verse 3]</span>
+<p class="lyric-line">Come <span class="c" data-chord="G">senators,</span> <span class="c" data-chord="Em">congressmen</span>
+please <span class="c" data-chord="C">heed</span>
+the <span class="c" data-chord="G">call</span></p>
+<p class="lyric-line">Don't stand in the
+<span class="c" data-chord="Gm">doorway,</span>
+don't <span class="c" data-chord="Em">block</span> up the <span class="c" data-chord="C">hall</span></p>
+<p class="lyric-line">For he that gets
+<span class="c" data-chord="G">hurt</span> will be <span class="c" data-chord="Em">he</span>
+who has <span class="c" data-chord="C">stalled</span></p>
+<p class="lyric-line">There's a <span class="c" data-chord="G">battle</span> outside and it's <span class="c" data-chord="D">ragin'</span></p>
+<p class="lyric-line">It'll soon <span class="c" data-chord="Cadd9">shake</span> your
+<span class="c" data-chord="Em7">windows</span>
+and <span class="c" data-chord="Cadd9">rattle</span>
+your <span class="c" data-chord="Em7">walls</span></p>
+<p class="lyric-line">For the <span class="c" data-chord="G">times,</span> they
+<span class="c" data-chord="C">are</span>
+a-<span class="c" data-chord="D">chan</span>-<span class="c" data-chord="G">gin'</span></p>
+
+<span class="section-label">[Verse 4]</span>
+<p class="lyric-line">Come <span class="c" data-chord="G">mothers</span> and
+<span class="c" data-chord="Em">fathers</span>
+through<span class="c" data-chord="C">out</span>
+the <span class="c" data-chord="G">land</span></p>
+<p class="lyric-line">And don't <span class="c" data-chord="Gm">criticize</span> what you <span class="c" data-chord="Em">can't</span> under<span class="c" data-chord="C">stand</span></p>
+<p class="lyric-line">Your <span class="c" data-chord="G">sons</span> and your
+<span class="c" data-chord="Em">daughters</span> are be<span class="c" data-chord="C">yond</span> your com<span class="c" data-chord="G">mand</span></p>
+<p class="lyric-line">Your old <span class="c" data-chord="G">road</span> is rapidly
+<span class="c" data-chord="D">agin'</span></p>
+<p class="lyric-line">Please get out of the
+<span class="c" data-chord="Cadd9">new</span>
+one if you <span class="c" data-chord="Em7">can't</span> lend your <span class="c" data-chord="Cadd9">hand</span></p>
+<p class="lyric-line">For the <span class="c" data-chord="G">times,</span> they
+<span class="c" data-chord="C">are</span>
+a-<span class="c" data-chord="D">chan</span>-<span class="c" data-chord="G">gin'</span></p>
+
+<span class="section-label">[Verse 5]</span>
+<p class="lyric-line">The <span class="c" data-chord="G">line</span> it is
+<span class="c" data-chord="Em">drawn,</span>
+the <span class="c" data-chord="C">curse</span>
+it is <span class="c" data-chord="G">cast</span></p>
+<p class="lyric-line">The <span class="c" data-chord="Gm">slow</span> one now will
+<span class="c" data-chord="Em">later</span> be
+<span class="c" data-chord="C">fast</span></p>
+<p class="lyric-line">As the <span class="c" data-chord="G">present</span> now will
+<span class="c" data-chord="Em">later</span> be
+<span class="c" data-chord="C">past</span></p>
+<p class="lyric-line">The <span class="c" data-chord="G">order</span> is rapidly
+<span class="c" data-chord="D">fadin'</span></p>
+<p class="lyric-line">And the <span class="c" data-chord="Cadd9">first</span> one now will <span class="c" data-chord="Em7">later</span> be <span class="c" data-chord="Cadd9">last</span></p>
+<p class="lyric-line">For the <span class="c" data-chord="G">times,</span> they
+<span class="c" data-chord="C">are</span>
+a-<span class="c" data-chord="D">chan</span>-<span class="c" data-chord="G">gin'</span></p>
+</div>
+</section>
+</div></div>
+</details>
+
+<details class="song-card" data-title="lay lady lay" data-artist="bob dylan">
+<summary><div class="song-title-line"><strong>Lay, Lady, Lay</strong><span>Bob Dylan</span></div></summary>
+<div class="song-body"><div class="view" id="song-lay-lady-lay">
+<section class="song">
+<div class="song-header">
+<div class="song-title">Lay, Lady, Lay</div>
+<div class="song-artist">Bob Dylan</div>
+<div class="song-meta">
+<span class="tag key">Key: A</span>
+<span class="tag">Tuning: Standard</span>
+</div>
+</div>
+<div class="song-content">
+<span class="section-label">[Verse 1]</span>
+<p class="lyric-line"><span class="c" data-chord="A">Lay</span> lady lay,
+<span class="c" data-chord="C♯m">lay</span>
+a<span class="c" data-chord="G">cross</span> my big <span class="c" data-chord="Bm">brass</span> bed <span class="c" data-chord="A">&nbsp;</span>
+<span class="c" data-chord="C♯m">&nbsp;</span> <span class="c" data-chord="G">&nbsp;</span>
+<span class="c" data-chord="Bm">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="A">Lay</span> lady lay,
+<span class="c" data-chord="C♯m">lay</span>
+a<span class="c" data-chord="G">cross</span> my big brass <span class="c" data-chord="Bm">bed</span> <span class="c" data-chord="A">&nbsp;</span>
+<span class="c" data-chord="C♯m">&nbsp;</span> <span class="c" data-chord="G">&nbsp;</span>
+<span class="c" data-chord="Bm">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="E">Whatever</span> colours <span class="c" data-chord="F♯m">you</span> have in your <span class="c" data-chord="A">mind</span></p>
+<p class="lyric-line"><span class="c" data-chord="E">I'll</span> show them to
+<span class="c" data-chord="F♯m">you</span>
+and you'll <span class="c" data-chord="A">see</span> them shine</p>
+<p class="lyric-line"><span class="c" data-chord="A">Lay</span> lady <span class="c" data-chord="C♯m">lay,</span>
+lay <span class="c" data-chord="G">across</span> my big <span class="c" data-chord="Bm">brass</span> bed
+<span class="c" data-chord="A">&nbsp;</span> <span class="c" data-chord="C♯m">&nbsp;</span> <span class="c" data-chord="G">&nbsp;</span>
+<span class="c" data-chord="Bm">&nbsp;</span></p>
+
+<span class="section-label">[Verse 2]</span>
+<p class="lyric-line"><span class="c" data-chord="A">Stay</span> lady stay, stay with your man a<span class="c" data-chord="C♯m">while</span> <span class="c" data-chord="G">&nbsp;</span>
+<span class="c" data-chord="Bm">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="A">Until</span> the break of day, let me see you make him <span class="c" data-chord="Bm">smile</span> <span class="c" data-chord="A">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="A">His</span> clothes are dirty but his hands are clean</p>
+<p class="lyric-line">And you're the best thing that he's ever seen</p>
+<p class="lyric-line"><span class="c" data-chord="A">Stay</span> lady stay, stay with your man a<span class="c" data-chord="C♯m">while</span> <span class="c" data-chord="G">&nbsp;</span>
+<span class="c" data-chord="Bm">&nbsp;</span></p>
+
+<span class="section-label">[Bridge]</span>
+<p class="lyric-line">Why <span class="c" data-chord="C♯m">wait</span>
+any longer for the world to be<span class="c" data-chord="E">gin</span> <span class="c" data-chord="F♯m">&nbsp;</span> <span class="c" data-chord="A">&nbsp;</span></p>
+<p class="lyric-line">You can <span class="c" data-chord="C♯m">have</span>
+your cake and eat it <span class="c" data-chord="Bm">too</span> <span class="c" data-chord="A">&nbsp;</span></p>
+<p class="lyric-line">Why <span class="c" data-chord="C♯m">wait</span>
+any longer for the <span class="c" data-chord="E">one</span> you <span class="c" data-chord="F♯m">love</span>
+<span class="c" data-chord="A">&nbsp;</span></p>
+<p class="lyric-line">When he's standing in front of <span class="c" data-chord="C♯m">you</span>
+<span class="c" data-chord="Bm">&nbsp;</span></p>
+
+<span class="section-label">[Verse 3]</span>
+<p class="lyric-line"><span class="c" data-chord="A">Lay</span> lady lay, lay across my big brass <span class="c" data-chord="Bm">bed</span> <span class="c" data-chord="A">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="A">Stay</span> lady stay, stay while the night is still a<span class="c" data-chord="C♯m">head</span> <span class="c" data-chord="G">&nbsp;</span>
+<span class="c" data-chord="Bm">&nbsp;</span></p>
+<p class="lyric-line"><span class="c" data-chord="A">I</span> long to see you in the morning light</p>
+<p class="lyric-line">I long to reach for you in the night</p>
+<p class="lyric-line"><span class="c" data-chord="A">Stay</span> lady stay, stay while the night is still a<span class="c" data-chord="C♯m">head</span> <span class="c" data-chord="G">&nbsp;</span>
+<span class="c" data-chord="Bm">&nbsp;</span></p>
+<span class="chord-line">A  C♯m  G  Bm  A Bm  C♯m  D  A</span>
+</div>
+</section>
+</div></div>
+</details>
+
+<details class="song-card" data-title="a horse with no name" data-artist="america">
+<summary><div class="song-title-line"><strong>A Horse with No Name</strong><span>America</span></div></summary>
+<div class="song-body"><div class="view" id="song-a-horse-with-no-name">
+<section class="song">
+<div class="song-header">
+<div class="song-title">A Horse with No Name</div>
+<div class="song-artist">America</div>
+<div class="song-meta">
+<span class="tag key">Key: Em</span>
+<span class="tag">Tuning: Standard</span>
+</div>
+</div>
+<div class="song-content">
+<span class="section-label">[Intro]</span>
+<span class="chord-line">Em  D6/9  (two chords throughout entire song)</span>
+
+<span class="section-label">[Verse 1]</span>
+<p class="lyric-line">On the <span class="c" data-chord="Em">first</span> part of the journey</p>
+<p class="lyric-line">I was looking at all the <span class="c" data-chord="D6/9">life</span></p>
+<p class="lyric-line">There were <span class="c" data-chord="Em">plants</span> and birds and rocks and things</p>
+<p class="lyric-line">There was sand and hills and <span class="c" data-chord="D6/9">rings</span></p>
+<p class="lyric-line">The <span class="c" data-chord="Em">desert</span> sun was cold and damp</p>
+<p class="lyric-line">Coming from my
+<span class="c" data-chord="D6/9">lamp</span></p>
+<p class="lyric-line">In the <span class="c" data-chord="Em">desert</span> you can remember your name</p>
+<p class="lyric-line">'Cause there ain't no one for to give you no <span class="c" data-chord="D6/9">pain</span></p>
+
+<span class="section-label">[Chorus]</span>
+<p class="lyric-line">La la la la la la la la la <span class="c" data-chord="Em">la</span></p>
+<p class="lyric-line">La la la la la la la la la <span class="c" data-chord="D6/9">la</span></p>
+<p class="lyric-line">La la la la la la la la la <span class="c" data-chord="Em">la</span></p>
+<p class="lyric-line">La la la la la
+<span class="c" data-chord="D6/9">la</span></p>
+
+<span class="section-label">[Verse 2]</span>
+<p class="lyric-line">After <span class="c" data-chord="Em">two</span> days in the desert sun</p>
+<p class="lyric-line">My skin began to
+<span class="c" data-chord="D6/9">turn</span>
+red</p>
+<p class="lyric-line">After <span class="c" data-chord="Em">three</span> days in the desert fun</p>
+<p class="lyric-line">I was looking at a river <span class="c" data-chord="D6/9">bed</span></p>
+<p class="lyric-line">And the <span class="c" data-chord="Em">story</span> it told of a river that flowed</p>
+<p class="lyric-line">Made me sad to think it was <span class="c" data-chord="D6/9">dead</span></p>
+
+<span class="section-label">[Verse 3]</span>
+<p class="lyric-line">After <span class="c" data-chord="Em">nine</span> days I let the horse run free</p>
+<p class="lyric-line">'Cause the desert had turned to <span class="c" data-chord="D6/9">sea</span></p>
+<p class="lyric-line">There were <span class="c" data-chord="Em">plants</span> and birds and rocks and things</p>
+<p class="lyric-line">There was sand and hills and <span class="c" data-chord="D6/9">rings</span></p>
+<p class="lyric-line">The <span class="c" data-chord="Em">ocean</span> is a desert with its life underground</p>
+<p class="lyric-line">And a perfect disguise
+<span class="c" data-chord="D6/9">above</span></p>
+<p class="lyric-line">Under the <span class="c" data-chord="Em">cities</span> lies a heart made of ground</p>
+<p class="lyric-line">But the humans will give no <span class="c" data-chord="D6/9">love</span></p>
+<span class="chord-line">Em  D6/9  (fade)</span>
+</div>
+</section>
+</div></div>
+</details>
+
+<details class="song-card" data-title="ventura highway" data-artist="america">
+<summary><div class="song-title-line"><strong>Ventura Highway</strong><span>America</span></div></summary>
+<div class="song-body"><div class="view" id="song-ventura-highway">
+<section class="song">
+<div class="song-header">
+<div class="song-title">Ventura Highway</div>
+<div class="song-artist">America</div>
+<div class="song-meta">
+<span class="tag key">Key: D</span>
+<span class="tag">Tuning: Standard</span>
+</div>
+</div>
+<div class="song-content">
+<span class="section-label">[Intro]</span>
+<span class="chord-line">Dmaj7  A  (repeat)</span>
+
+<span class="section-label">[Verse 1]</span>
+<p class="lyric-line">Chewing on a <span class="c" data-chord="Dmaj7">piece</span> of grass</p>
+<p class="lyric-line">Walking down the
+<span class="c" data-chord="A">road</span></p>
+<p class="lyric-line">Tell me, how long you gonna stay <span class="c" data-chord="Dmaj7">here</span></p>
+<p class="lyric-line">Joe? <span class="c" data-chord="A">&nbsp;</span></p>
+<p class="lyric-line">Some people say this
+<span class="c" data-chord="Dmaj7">town</span>
+don't look</p>
+<p class="lyric-line">Good in <span class="c" data-chord="A">snow</span></p>
+<p class="lyric-line">You don't care, I know
+<span class="c" data-chord="Dmaj7">&nbsp;</span> <span class="c" data-chord="A">&nbsp;</span></p>
+
+<span class="section-label">[Chorus]</span>
+<p class="lyric-line"><span class="c" data-chord="Dmaj7">Ventura</span>
+<span class="c" data-chord="A">Highway</span>
+in the <span class="c" data-chord="Dmaj7">sunshine</span></p>
+<p class="lyric-line">Where the <span class="c" data-chord="A">days</span> are longer</p>
+<p class="lyric-line">The <span class="c" data-chord="Dmaj7">nights</span> are stronger than <span class="c" data-chord="A">moonshine</span></p>
+<p class="lyric-line">You're gonna <span class="c" data-chord="Dmaj7">go</span> I know</p>
+<p class="lyric-line">'Cause the <span class="c" data-chord="A">free</span>
+wind is blowing through your hair</p>
+<p class="lyric-line">And the <span class="c" data-chord="Dmaj7">days</span> surround your daylight there</p>
+<p class="lyric-line">Seasons <span class="c" data-chord="A">crying</span> no despair</p>
+<p class="lyric-line">Alligator <span class="c" data-chord="Dmaj7">lizards</span> in the air <span class="c" data-chord="A">&nbsp;</span></p>
+
+<span class="section-label">[Verse 2]</span>
+<p class="lyric-line">Wishing on a <span class="c" data-chord="Dmaj7">falling</span>
+star</p>
+<p class="lyric-line">Waiting for the
+<span class="c" data-chord="A">early</span>
+train</p>
+<p class="lyric-line">Sorry, boy, but I've been hit by <span class="c" data-chord="Dmaj7">purple</span> rain</p>
+<p class="lyric-line">Aw, come on <span class="c" data-chord="A">Joe</span></p>
+<p class="lyric-line">You can always change your <span class="c" data-chord="Dmaj7">name</span></p>
+<p class="lyric-line">Thanks a lot, <span class="c" data-chord="A">son</span></p>
+<p class="lyric-line">Just the same <span class="c" data-chord="Dmaj7">&nbsp;</span>
+<span class="c" data-chord="A">&nbsp;</span></p>
+<span class="chord-line">Dmaj7  A  (repeat and fade)</span>
+</div>
+</section>
+</div></div>
+</details>
+
+<details class="song-card" data-title="sweet baby james" data-artist="james taylor">
+<summary><div class="song-title-line"><strong>Sweet Baby James</strong><span>James Taylor</span></div></summary>
+<div class="song-body"><div class="view" id="song-sweet-baby-james">
+<section class="song">
+<div class="song-header">
+<div class="song-title">Sweet Baby James</div>
+<div class="song-artist">James Taylor</div>
+<div class="song-meta">
+<span class="tag key">Key: D</span>
+<span class="tag">Tuning: Standard</span>
+</div>
+</div>
+<div class="song-content">
+<span class="section-label">[Intro]</span>
+<span class="chord-line">G  F♯  E A  A</span>
+
+<span class="section-label">[Verse 1]</span>
+<p class="lyric-line">There is a young
+<span class="c" data-chord="D">cowboy</span> he lives on the <span class="c" data-chord="A">range</span></p>
+<p class="lyric-line">His <span class="c" data-chord="G">horse</span> and his cattle are his <span class="c" data-chord="D">only</span> com<span class="c" data-chord="F♯m">panion</span></p>
+<p class="lyric-line">He <span class="c" data-chord="Bm">works</span> in the
+<span class="c" data-chord="G">saddle</span>
+and he <span class="c" data-chord="D">sleeps</span>
+in the <span class="c" data-chord="F♯m">canyon</span></p>
+<p class="lyric-line"><span class="c" data-chord="G">Waiting</span> for
+<span class="c" data-chord="D">summer,</span>
+his <span class="c" data-chord="A">pastures</span>
+to <span class="c" data-chord="Em">change</span> <span class="c" data-chord="A">&nbsp;</span></p>
+<p class="lyric-line">And <span class="c" data-chord="G">as</span> the moon rises he <span class="c" data-chord="A">sits</span>
+by his <span class="c" data-chord="D">fire</span></p>
+<p class="lyric-line"><span class="c" data-chord="Bm">Thinkin'</span>
+about <span class="c" data-chord="G">women</span> and <span class="c" data-chord="D">glasses</span> of <span class="c" data-chord="A">beer</span></p>
+<p class="lyric-line"><span class="c" data-chord="G">Closing</span> his eyes as the <span class="c" data-chord="A">doggies</span> re<span class="c" data-chord="D">tire</span></p>
+<p class="lyric-line">He <span class="c" data-chord="Bm">sings</span> out a
+<span class="c" data-chord="G">song</span>
+which is <span class="c" data-chord="D">soft</span>
+but it's <span class="c" data-chord="A">clear</span></p>
+<p class="lyric-line">As if <span class="c" data-chord="Bm">maybe</span> <span class="c" data-chord="E">someone</span> could
+<span class="c" data-chord="A">hear</span>
+<span class="c" data-chord="D">&nbsp;</span> <span class="c" data-chord="G">&nbsp;</span>
+<span class="c" data-chord="A">&nbsp;</span> <span class="c" data-chord="D">&nbsp;</span></p>
+
+<span class="section-label">[Chorus]</span>
+<p class="lyric-line">Goodnight you <span class="c" data-chord="G">moonlight</span> ladies.
+<span class="c" data-chord="Bm">Rock-a-bye</span> <span class="c" data-chord="G">sweet</span> baby
+<span class="c" data-chord="D">James</span></p>
+<p class="lyric-line"><span class="c" data-chord="Bm">Deep</span> greens and
+<span class="c" data-chord="G">blues</span> are the <span class="c" data-chord="D">colors</span>
+I choose</p>
+<p class="lyric-line">Won't you <span class="c" data-chord="Bm">let</span> me go
+<span class="c" data-chord="E">down</span> in my <span class="c" data-chord="A">dreams</span></p>
+<p class="lyric-line">And <span class="c" data-chord="G">rock-a-bye</span>
+<span class="c" data-chord="A">sweet</span>
+baby <span class="c" data-chord="D">James</span></p>
+
+<span class="section-label">[Verse 2]</span>
+<p class="lyric-line">Now the <span class="c" data-chord="D">first</span> of De<span class="c" data-chord="A">cember</span>
+was <span class="c" data-chord="G">covered</span> with <span class="c" data-chord="F♯m">snow</span></p>
+<p class="lyric-line">And <span class="c" data-chord="Bm">so</span> was the
+<span class="c" data-chord="G">turnpike</span>
+from <span class="c" data-chord="D">Stockbridge</span>
+to <span class="c" data-chord="F♯m">Boston</span></p>
+<p class="lyric-line">Lord the <span class="c" data-chord="Bm">Berkshires</span> seemed
+<span class="c" data-chord="G">dreamlike</span>
+on a<span class="c" data-chord="D">count</span>
+of that <span class="c" data-chord="F♯m">frostin'</span></p>
+<p class="lyric-line">With <span class="c" data-chord="G">ten</span> miles be<span class="c" data-chord="D">hind</span> me and <span class="c" data-chord="A">ten</span>
+thousand <span class="c" data-chord="Em">more</span> to go <span class="c" data-chord="A">&nbsp;</span></p>
+<p class="lyric-line">There's a <span class="c" data-chord="G">song</span> that they sing when they <span class="c" data-chord="A">take</span> to the <span class="c" data-chord="D">highway</span></p>
+<p class="lyric-line">A <span class="c" data-chord="Bm">song</span> that they
+<span class="c" data-chord="G">sing</span> when they <span class="c" data-chord="D">take</span>
+to the <span class="c" data-chord="A">sea</span></p>
+<p class="lyric-line">A <span class="c" data-chord="G">song</span> that they sing of their <span class="c" data-chord="A">home</span> in the <span class="c" data-chord="D">sky</span></p>
+<p class="lyric-line">Maybe <span class="c" data-chord="Bm">you</span> can be<span class="c" data-chord="G">lieve</span> it if it <span class="c" data-chord="D">helps</span> you to sleep</p>
+<p class="lyric-line">But <span class="c" data-chord="Bm">singing</span> works
+<span class="c" data-chord="E">just</span> fine for <span class="c" data-chord="A">me</span>
+<span class="c" data-chord="A">&nbsp;</span></p>
+
+<span class="section-label">[Chorus]</span>
+<p class="lyric-line">Goodnight you <span class="c" data-chord="G">moonlight</span> ladies.
+<span class="c" data-chord="Bm">Rock-a-bye</span> <span class="c" data-chord="G">sweet</span> baby
+<span class="c" data-chord="D">James</span></p>
+<p class="lyric-line"><span class="c" data-chord="Bm">Deep</span> greens and
+<span class="c" data-chord="G">blues</span> are the <span class="c" data-chord="D">colors</span>
+I choose</p>
+<p class="lyric-line">Won't you <span class="c" data-chord="Bm">let</span> me go
+<span class="c" data-chord="E">down</span> in my <span class="c" data-chord="A">dreams</span></p>
+<p class="lyric-line">And <span class="c" data-chord="G">rock-a-bye</span>
+<span class="c" data-chord="A">sweet</span>
+baby <span class="c" data-chord="D">James</span></p>
+</div>
+</section>
+</div></div>
+</details>
+
+<details class="song-card" data-title="carolina in my mind" data-artist="james taylor">
+<summary><div class="song-title-line"><strong>Carolina in My Mind</strong><span>James Taylor</span></div></summary>
+<div class="song-body"><div class="view" id="song-carolina-in-my-mind">
+<section class="song">
+<div class="song-header">
+<div class="song-title">Carolina in My Mind</div>
+<div class="song-artist">James Taylor</div>
+<div class="song-meta">
+<span class="tag key">Key: D</span>
+<span class="tag">Tuning: Standard</span>
+</div>
+</div>
+<div class="song-content">
+<span class="section-label">[Hook]</span>
+<p class="lyric-line">In my <span class="c" data-chord="D">mind</span> I've gone to
+<span class="c" data-chord="G">Carolina</span></p>
+<p class="lyric-line">Can't you see the
+<span class="c" data-chord="A7">sunshine?</span></p>
+<p class="lyric-line"><span class="c" data-chord="Em7">Can't</span> you just feel the <span class="c" data-chord="A7">moonshine?</span></p>
+<p class="lyric-line">Ain't it just like a <span class="c" data-chord="G">friend</span> of mine to <span class="c" data-chord="D/F♯">hit</span>
+me from <span class="c" data-chord="Em7">behind?</span></p>
+<p class="lyric-line"><span class="c" data-chord="D">Yes,</span> I'm gone to
+<span class="c" data-chord="Em7">Carolina</span> in my <span class="c" data-chord="A7">mind</span> <span class="c" data-chord="D">&nbsp;</span></p>
+
+<span class="section-label">[Verse 1]</span>
+<p class="lyric-line"><span class="c" data-chord="D">Karen,</span> she's a silver sun you'd best walk her <span class="c" data-chord="G">way</span> and watch it <span class="c" data-chord="A7">shining</span></p>
+<p class="lyric-line"><span class="c" data-chord="Bm">Watch</span> her watch the morning <span class="c" data-chord="G">come</span> <span class="c" data-chord="A7sus4">&nbsp;</span>
+<span class="c" data-chord="A7">&nbsp;</span></p>
+<p class="lyric-line">A silver <span class="c" data-chord="G">tear</span> appearing now, I'm <span class="c" data-chord="D/F♯">crying</span></p>
+<p class="lyric-line">Ain't I? <span class="c" data-chord="Esus4">&nbsp;</span> <span class="c" data-chord="A7">&nbsp;</span></p>
+
+<span class="section-label">[Verse 2]</span>
+<p class="lyric-line">There <span class="c" data-chord="D">ain't</span>
+no doubt in no one's mind that <span class="c" data-chord="G">love's</span> the finest thing a<span class="c" data-chord="A7">round</span></p>
+<p class="lyric-line"><span class="c" data-chord="Bm">Whisper</span> something soft and <span class="c" data-chord="G">kind</span> <span class="c" data-chord="A7sus4">&nbsp;</span>
+<span class="c" data-chord="A7">&nbsp;</span></p>
+<p class="lyric-line">And hey babe, the
+<span class="c" data-chord="G">sky's</span> on fire, I'm <span class="c" data-chord="D/F♯">dying</span></p>
+<p class="lyric-line">Ain't I? <span class="c" data-chord="Esus4">&nbsp;</span> <span class="c" data-chord="A7">&nbsp;</span></p>
+
+<span class="section-label">[Verse 3]</span>
+<p class="lyric-line">Dark and <span class="c" data-chord="D">silent,</span> late last night I think the <span class="c" data-chord="G">lighthouse</span> heard the highway <span class="c" data-chord="A7">calling</span></p>
+<p class="lyric-line"><span class="c" data-chord="Bm">Geese</span> in flight and dogs that <span class="c" data-chord="G">bite</span> <span class="c" data-chord="A7sus4">&nbsp;</span>
+<span class="c" data-chord="A7">&nbsp;</span></p>
+<p class="lyric-line">Signs that might be
+<span class="c" data-chord="G">omens</span> say I'm <span class="c" data-chord="D/F♯">going,</span>
+I'm <span class="c" data-chord="A7sus4">going,</span> <span class="c" data-chord="A7">&nbsp;</span></p>
+
+<span class="section-label">[Bridge]</span>
+<p class="lyric-line">With a <span class="c" data-chord="G">holy</span> host of others standing <span class="c" data-chord="A7">round</span> me</p>
+<p class="lyric-line">Still I'm on the
+<span class="c" data-chord="Em7">dark</span>
+side of the <span class="c" data-chord="Gm">moon</span> <span class="c" data-chord="A7">&nbsp;</span></p>
+<p class="lyric-line">And it <span class="c" data-chord="C">seems</span> like it goes on like this for<span class="c" data-chord="G/B">ever</span></p>
+<p class="lyric-line">You must for<span class="c" data-chord="C">give</span> me <span class="c" data-chord="G/B">&nbsp;</span>
+<span class="c" data-chord="Em7">&nbsp;</span> <span class="c" data-chord="A7">&nbsp;</span></p>
+<p class="lyric-line">If I'm up and <span class="c" data-chord="D">gone</span> to Carolina in my <span class="c" data-chord="Em7">mind</span> <span class="c" data-chord="A7">&nbsp;</span>
+<span class="c" data-chord="D">&nbsp;</span></p>
+</div>
+</section>
+</div></div>
+</details>
+
+<details class="song-card" data-title="copperline" data-artist="james taylor">
+<summary><div class="song-title-line"><strong>Copperline</strong><span>James Taylor</span></div></summary>
+<div class="song-body"><div class="view" id="song-copperline">
+<section class="song">
+<div class="song-header">
+<div class="song-title">Copperline</div>
+<div class="song-artist">James Taylor</div>
+<div class="song-meta">
+<span class="tag key">Key: D</span>
+<span class="tag">Tuning: Standard</span>
+</div>
+</div>
+<div class="song-content">
+<span class="section-label">[Intro / Throughout]</span>
+<span class="chord-line">D  G/B  D G/B  D  G/B  G A</span>
+
+<span class="section-label">[Verse 1]</span>
+<p class="lyric-line">Half a mile down to
+<span class="c" data-chord="D">Morgan</span>
+<span class="c" data-chord="G/B">Creek</span></p>
+<p class="lyric-line">Leaning heavy on the
+<span class="c" data-chord="D">end</span> of the <span class="c" data-chord="G/B">week</span></p>
+<p class="lyric-line">Biting on a piece of
+<span class="c" data-chord="D">sugar</span>
+<span class="c" data-chord="G/B">cane</span></p>
+<p class="lyric-line">Easy in the <span class="c" data-chord="Em">summer</span> <span class="c" data-chord="D6/F♯">rain</span></p>
+
+<span class="section-label">[Chorus]</span>
+<p class="lyric-line">Copper<span class="c" data-chord="D">line,</span>
+<span class="c" data-chord="G/B">copper</span>line</p>
+<p class="lyric-line">It was <span class="c" data-chord="G">always</span>
+summer<span class="c" data-chord="A">time</span></p>
+<p class="lyric-line">Down on <span class="c" data-chord="D">Copper</span><span class="c" data-chord="G/B">line</span></p>
+
+<span class="section-label">[Verse 2]</span>
+<p class="lyric-line">First kiss ever I
+<span class="c" data-chord="D">took</span>
+<span class="c" data-chord="G/B">&nbsp;</span></p>
+<p class="lyric-line">Like a page from a
+<span class="c" data-chord="D">romance</span>
+<span class="c" data-chord="G/B">book</span></p>
+<p class="lyric-line">Salt and sweet on the
+<span class="c" data-chord="D">sum</span>mer <span class="c" data-chord="G/B">ground</span></p>
+<p class="lyric-line">Dizzy with the
+<span class="c" data-chord="Em">apple</span> <span class="c" data-chord="D6/F♯">wine</span></p>
+<p class="lyric-line">Down on <span class="c" data-chord="D">Copper</span><span class="c" data-chord="G/B">line</span></p>
+
+<span class="section-label">[Verse 3]</span>
+<p class="lyric-line">Tried so hard to
+<span class="c" data-chord="D">slow</span> the
+<span class="c" data-chord="G/B">changes</span></p>
+<p class="lyric-line">Time is cunning, time
+<span class="c" data-chord="D">ar</span>ranges
+<span class="c" data-chord="G/B">&nbsp;</span></p>
+<p class="lyric-line">Can't go back and I
+<span class="c" data-chord="G">can't</span>
+stand <span class="c" data-chord="A">still</span></p>
+<p class="lyric-line">Down on <span class="c" data-chord="D">Copper</span><span class="c" data-chord="G/B">line</span></p>
+
+<span class="section-label">[Outro]</span>
+<span class="chord-line">D  G/B  D G/B  (repeat and fade)</span>
+</div>
+</section>
+</div></div>
+</details>
+
+<details class="song-card" data-title="america" data-artist="simon &amp; garfunkel">
+<summary><div class="song-title-line"><strong>America</strong><span>Simon &amp; Garfunkel</span></div></summary>
+<div class="song-body"><div class="view" id="song-america-simon-garfunkel">
+<section class="song">
+<div class="song-header">
+<div class="song-title">America</div>
+<div class="song-artist">Simon &amp; Garfunkel</div>
+<div class="song-meta">
+<span class="tag key">Key: C (Capo 2)</span>
+<span class="tag">Tuning: Standard</span>
+</div>
+</div>
+<div class="song-content">
+<span class="section-label">[Verse 1]</span>
+<p class="lyric-line">Let us be <span class="c" data-chord="C">lovers,</span>
+we'll marry our <span class="c" data-chord="Cmaj7">fortunes</span> to<span class="c" data-chord="Am">gether</span></p>
+<p class="lyric-line">I've got some real estate <span class="c" data-chord="G">here</span> in my <span class="c" data-chord="F">bag</span></p>
+<p class="lyric-line">So we bought a pack of
+<span class="c" data-chord="C">cigarettes</span> and Mrs. <span class="c" data-chord="Cmaj7">Wagner's</span> <span class="c" data-chord="Am">pies</span></p>
+<p class="lyric-line">And walked off to look for <span class="c" data-chord="G">America</span> <span class="c" data-chord="F">&nbsp;</span></p>
+
+<span class="section-label">[Verse 2]</span>
+<p class="lyric-line">"<span class="c" data-chord="C">Kathy,"</span> I said as we <span class="c" data-chord="Cmaj7">boarded</span> a <span class="c" data-chord="Am">Greyhound</span> in Pittsburgh</p>
+<p class="lyric-line">"Michigan seems like a dream to me <span class="c" data-chord="G">now</span>" <span class="c" data-chord="F">&nbsp;</span></p>
+<p class="lyric-line">It took me four days to <span class="c" data-chord="C">hitchhike</span> from <span class="c" data-chord="Am">Saginaw</span></p>
+<p class="lyric-line">I've come to look for
+<span class="c" data-chord="Am7">America</span>
+<span class="c" data-chord="F">&nbsp;</span></p>
+
+<span class="section-label">[Verse 3]</span>
+<p class="lyric-line">Laughing on the
+<span class="c" data-chord="C">bus</span></p>
+<p class="lyric-line">Playing games with the
+<span class="c" data-chord="Cmaj7">faces</span></p>
+<p class="lyric-line">She said the man in the gabardine suit was a <span class="c" data-chord="Am">spy</span></p>
+<p class="lyric-line">I said "Be careful, his bowtie is <span class="c" data-chord="G">really</span> a <span class="c" data-chord="F">camera"</span></p>
+
+<span class="section-label">[Verse 4]</span>
+<p class="lyric-line">"<span class="c" data-chord="C">Toss</span> me a cigarette, I think there's one in my <span class="c" data-chord="Cmaj7">raincoat"</span></p>
+<p class="lyric-line">"We smoked the last one an hour a<span class="c" data-chord="Am">go"</span></p>
+<p class="lyric-line">So I looked at the scenery, she read her <span class="c" data-chord="Em">magazine</span></p>
+<p class="lyric-line">And the moon rose over an open <span class="c" data-chord="A7">field</span></p>
+
+<span class="section-label">[Verse 5]</span>
+<p class="lyric-line">"<span class="c" data-chord="C">Kathy,</span>
+I'm lost," I said, though I knew she was <span class="c" data-chord="Cmaj7">sleeping</span></p>
+<p class="lyric-line">"I'm empty and aching and I don't know <span class="c" data-chord="Am">why"</span></p>
+<p class="lyric-line">Counting the cars on the New Jersey <span class="c" data-chord="Em">Turnpike</span></p>
+<p class="lyric-line">They've all come to look for <span class="c" data-chord="A7">America</span></p>
+<p class="lyric-line">All come to look for A<span class="c" data-chord="C">merica</span></p>
+<p class="lyric-line">All come to look for A<span class="c" data-chord="C">merica</span></p>
+</div>
+</section>
+</div></div>
+</details>
+
+<details class="song-card" data-title="doctor my eyes" data-artist="jackson browne">
+<summary><div class="song-title-line"><strong>Doctor My Eyes</strong><span>Jackson Browne</span></div></summary>
+<div class="song-body"><div class="view" id="song-doctor-my-eyes">
+<section class="song">
+<div class="song-header">
+<div class="song-title">Doctor My Eyes</div>
+<div class="song-artist">Jackson Browne</div>
+<div class="song-meta">
+<span class="tag key">Key: F</span>
+<span class="tag">Tuning: Standard</span>
+</div>
+</div>
+<div class="song-content">
+<span class="section-label">[Intro]</span>
+<span class="chord-line">F  B♭</span>
+
+<span class="section-label">[Verse 1]</span>
+<p class="lyric-line"><span class="c" data-chord="F">Doctor,</span>
+my eyes have seen the years</p>
+<p class="lyric-line">And the <span class="c" data-chord="Am">slow</span> parade of fears without <span class="c" data-chord="Dm">crying</span></p>
+<p class="lyric-line">Now I <span class="c" data-chord="B♭">want</span>
+to under<span class="c" data-chord="F">stand</span></p>
+<p class="lyric-line">I have <span class="c" data-chord="F">done</span> all that I could</p>
+<p class="lyric-line">To see the <span class="c" data-chord="Am">evil</span> and the good without <span class="c" data-chord="Dm">hiding</span></p>
+<p class="lyric-line">You must <span class="c" data-chord="B♭">help</span>
+me if you <span class="c" data-chord="F">can</span></p>
+
+<span class="section-label">[Chorus]</span>
+<p class="lyric-line">Doctor, my <span class="c" data-chord="Dm">eyes</span></p>
+<p class="lyric-line"><span class="c" data-chord="F">Tell</span> me what is wrong</p>
+<p class="lyric-line">Was I <span class="c" data-chord="Dm">unwise</span> to leave them open for so <span class="c" data-chord="Am">long</span></p>
+<p class="lyric-line">'Cause I have <span class="c" data-chord="F">wandered</span> through this world</p>
+<p class="lyric-line">And as each moment has un<span class="c" data-chord="Dm">furled</span></p>
+<p class="lyric-line">I've been waiting to a<span class="c" data-chord="Am">waken</span>
+from these <span class="c" data-chord="B♭">dreams</span></p>
+
+<span class="section-label">[Verse 2]</span>
+<p class="lyric-line"><span class="c" data-chord="F">People</span> go just where they will</p>
+<p class="lyric-line">I never <span class="c" data-chord="Am">noticed</span> them until I got this <span class="c" data-chord="Dm">feeling</span></p>
+<p class="lyric-line">That it's <span class="c" data-chord="B♭">later</span>
+than it <span class="c" data-chord="F">seems</span></p>
+<p class="lyric-line"><span class="c" data-chord="F">Doctor,</span>
+my eyes</p>
+<p class="lyric-line">Cannot <span class="c" data-chord="Am">see</span> the sky</p>
+<p class="lyric-line">Is this the <span class="c" data-chord="Dm">prize</span> for having learned how not to <span class="c" data-chord="B♭">cry</span></p>
+</div>
+</section>
+</div></div>
+</details>
+
+<details class="song-card" data-title="running on empty" data-artist="jackson browne">
+<summary><div class="song-title-line"><strong>Running on Empty</strong><span>Jackson Browne</span></div></summary>
+<div class="song-body"><div class="view" id="song-running-on-empty">
+<section class="song">
+<div class="song-header">
+<div class="song-title">Running on Empty</div>
+<div class="song-artist">Jackson Browne</div>
+<div class="song-meta">
+<span class="tag key">Key: D</span>
+<span class="tag">Tuning: Standard</span>
+</div>
+</div>
+<div class="song-content">
+<span class="section-label">[Intro]</span>
+<span class="chord-line">D  D/A  (x3)  F♯m  F♯m  D  E</span>
+
+<span class="section-label">[Verse 1]</span>
+<p class="lyric-line">Looking out at the
+<span class="c" data-chord="D">road</span>
+rushing under my <span class="c" data-chord="A">wheels</span> <span class="c" data-chord="D">&nbsp;</span></p>
+<p class="lyric-line">Looking back at the
+<span class="c" data-chord="A">years</span>
+gone by, like so many summer <span class="c" data-chord="D">fields</span> <span class="c" data-chord="A">&nbsp;</span></p>
+<p class="lyric-line">In sixty-five I was
+<span class="c" data-chord="A">seventeen,</span>
+and running up <span class="c" data-chord="D">101</span> <span class="c" data-chord="A">&nbsp;</span></p>
+<p class="lyric-line">I don't know where I'm
+<span class="c" data-chord="A">running</span>
+now, I'm just <span class="c" data-chord="E">running</span> on</p>
+
+<span class="section-label">[Chorus]</span>
+<p class="lyric-line">Running <span class="c" data-chord="D">on,</span>
+running on <span class="c" data-chord="A">empty</span></p>
+<p class="lyric-line">Running <span class="c" data-chord="D">on,</span>
+running <span class="c" data-chord="A">blind</span></p>
+<p class="lyric-line">Running <span class="c" data-chord="D">on,</span> running into the <span class="c" data-chord="A">sun,</span>
+but I'm running be<span class="c" data-chord="F♯m">hind</span> <span class="c" data-chord="E">&nbsp;</span></p>
+
+<span class="section-label">[Verse 2]</span>
+<p class="lyric-line">Gotta do what you
+<span class="c" data-chord="A">can</span> just to keep your <span class="c" data-chord="D">love</span> alive <span class="c" data-chord="A">&nbsp;</span></p>
+<p class="lyric-line">Trying not to con<span class="c" data-chord="A">fuse</span>
+it with what you <span class="c" data-chord="D">do</span> to sur<span class="c" data-chord="A">vive</span></p>
+<p class="lyric-line">In sixty-nine I was
+<span class="c" data-chord="A">twenty-one</span> and called the road my
+<span class="c" data-chord="D">own</span>
+<span class="c" data-chord="A">&nbsp;</span></p>
+<p class="lyric-line">I don't know when that
+<span class="c" data-chord="A">road</span>
+turned onto the <span class="c" data-chord="E">road</span> I'm on</p>
+
+<span class="section-label">[Bridge]</span>
+<p class="lyric-line"><span class="c" data-chord="F♯m">Everyone</span>
+I <span class="c" data-chord="D">know,</span>
+<span class="c" data-chord="E">everywhere</span> I <span class="c" data-chord="A">go</span></p>
+<p class="lyric-line"><span class="c" data-chord="F♯m">People</span>
+need some <span class="c" data-chord="E">reason</span> to be<span class="c" data-chord="D">lieve;</span>
+I don't <span class="c" data-chord="E">know</span> about <span class="c" data-chord="A">anyone</span> but
+<span class="c" data-chord="D">me</span></p>
+<p class="lyric-line">If it takes all
+<span class="c" data-chord="F♯m">night,</span> that'll be all <span class="c" data-chord="E">right</span></p>
+<p class="lyric-line">If I can get you to
+<span class="c" data-chord="D">smile</span>
+before I <span class="c" data-chord="E">leave</span></p>
+
+<span class="section-label">[Verse 3]</span>
+<p class="lyric-line">Looking out at the
+<span class="c" data-chord="A">road</span>
+rushing under my <span class="c" data-chord="D">wheels</span> <span class="c" data-chord="A">&nbsp;</span></p>
+<p class="lyric-line">I don't know how to
+<span class="c" data-chord="A">tell</span> you all just how <span class="c" data-chord="D">crazy</span> this life <span class="c" data-chord="A">feels</span></p>
+<p class="lyric-line">I look around for the
+<span class="c" data-chord="A">friends</span> I used to <span class="c" data-chord="D">turn</span> to, to pull me <span class="c" data-chord="A">through</span></p>
+<p class="lyric-line">Looking into their
+<span class="c" data-chord="A">eyes</span> I see them <span class="c" data-chord="E">running</span> too</p>
+
+<span class="section-label">[Chorus]</span>
+<p class="lyric-line">Running <span class="c" data-chord="D">on,</span>
+running on <span class="c" data-chord="A">empty</span></p>
+<p class="lyric-line">Running <span class="c" data-chord="D">on,</span>
+running <span class="c" data-chord="A">blind</span></p>
+<p class="lyric-line">Running <span class="c" data-chord="D">on,</span> running into the <span class="c" data-chord="A">sun,</span>
+but I'm running be<span class="c" data-chord="F♯m">hind</span> <span class="c" data-chord="E">&nbsp;</span></p>
+</div>
+</section>
+</div></div>
+</details>
+
+<details class="song-card" data-title="take it easy" data-artist="eagles">
+<summary><div class="song-title-line"><strong>Take It Easy</strong><span>Eagles</span></div></summary>
+<div class="song-body"><div class="view" id="song-take-it-easy">
+<section class="song">
+<div class="song-header">
+<div class="song-title">Take It Easy</div>
+<div class="song-artist">Eagles</div>
+<div class="song-meta">
+<span class="tag key">Key: G</span>
+<span class="tag">Tuning: Standard</span>
+</div>
+</div>
+<div class="song-content">
+<span class="section-label">[Verse 1]</span>
+<p class="lyric-line">Well I'm a <span class="c" data-chord="G">runnin'</span>
+down the road try'n to loosen my load</p>
+<p class="lyric-line">I've got seven women
+<span class="c" data-chord="D">on</span> my
+<span class="c" data-chord="C">mind</span></p>
+<p class="lyric-line"><span class="c" data-chord="G">Four</span> that wanna own me, <span class="c" data-chord="D">two</span> that wanna stone me</p>
+<p class="lyric-line"><span class="c" data-chord="C">One</span> says she's a friend of mine <span class="c" data-chord="G">&nbsp;</span></p>
+<p class="lyric-line">Take it <span class="c" data-chord="Em">easy,</span>
+take it e<span class="c" data-chord="C">asy</span> <span class="c" data-chord="G">&nbsp;</span></p>
+<p class="lyric-line">Don't let the <span class="c" data-chord="Am">sound</span> of your own
+<span class="c" data-chord="C">wheels</span>
+drive you <span class="c" data-chord="Em">crazy</span></p>
+<p class="lyric-line">Lighten up <span class="c" data-chord="C">while</span> you still
+<span class="c" data-chord="G">can</span></p>
+<p class="lyric-line">Don't even <span class="c" data-chord="C">try</span> to understand
+<span class="c" data-chord="G">&nbsp;</span></p>
+<p class="lyric-line">Just find a <span class="c" data-chord="Am">place</span> to make your <span class="c" data-chord="C">stand,</span> and take it ea<span class="c" data-chord="G">sy</span></p>
+
+<span class="section-label">[Verse 2]</span>
+<p class="lyric-line">Well I'm a <span class="c" data-chord="G">standin'</span>
+on a corner in Winslow, Arizona</p>
+<p class="lyric-line">Such a fine <span class="c" data-chord="D">sight</span> to <span class="c" data-chord="C">see</span></p>
+<p class="lyric-line">It's a <span class="c" data-chord="G">girl</span> my lord in a
+<span class="c" data-chord="D">flat-bed</span>
+Ford</p>
+<p class="lyric-line">Slowin' <span class="c" data-chord="C">down</span> to take a look at me <span class="c" data-chord="G">&nbsp;</span></p>
+<p class="lyric-line">Come on, <span class="c" data-chord="Em">baby,</span>
+don't say <span class="c" data-chord="C">maybe</span> <span class="c" data-chord="G">&nbsp;</span></p>
+<p class="lyric-line">I gotta
+<span class="c" data-chord="Am">know</span> if your sweet <span class="c" data-chord="C">love</span> is gonna save <span class="c" data-chord="Em">me</span></p>
+<p class="lyric-line">We may <span class="c" data-chord="C">lose</span> and we may
+<span class="c" data-chord="G">win,</span>
+though we may <span class="c" data-chord="C">never</span>
+be here <span class="c" data-chord="G">again</span></p>
+<p class="lyric-line">So open <span class="c" data-chord="Am">up</span> I'm climbin' <span class="c" data-chord="C">in,</span> so take it ea<span class="c" data-chord="G">sy</span></p>
+
+<span class="section-label">[Verse 3]</span>
+<p class="lyric-line">Well I'm a <span class="c" data-chord="G">runnin'</span>
+down the road tryin' to loosen my load</p>
+<p class="lyric-line">Got a world of trouble
+<span class="c" data-chord="D">on</span> my
+<span class="c" data-chord="C">mind</span></p>
+<p class="lyric-line"><span class="c" data-chord="G">Lookin'</span>
+for a lover who <span class="c" data-chord="D">won't</span> blow my cover</p>
+<p class="lyric-line">She's <span class="c" data-chord="C">so</span> hard to find
+<span class="c" data-chord="G">&nbsp;</span></p>
+<p class="lyric-line">Take it <span class="c" data-chord="Em">easy,</span>
+take it e<span class="c" data-chord="C">asy</span> <span class="c" data-chord="G">&nbsp;</span></p>
+<p class="lyric-line">Don't let the <span class="c" data-chord="Am">sound</span> of your own
+<span class="c" data-chord="C">wheels</span>
+make you <span class="c" data-chord="Em">crazy</span></p>
+<p class="lyric-line">Come on <span class="c" data-chord="C">baby,</span>
+don't say <span class="c" data-chord="G">maybe</span></p>
+<p class="lyric-line">I gotta
+<span class="c" data-chord="Am">know</span> of your sweet <span class="c" data-chord="C">love</span> is gonna
+<span class="c" data-chord="G">save</span> me
+<span class="c" data-chord="C">&nbsp;</span> <span class="c" data-chord="Em">&nbsp;</span></p>
+</div>
+</section>
+</div></div>
+</details>
+
+<details class="song-card" data-title="desperado" data-artist="eagles">
+<summary><div class="song-title-line"><strong>Desperado</strong><span>Eagles</span></div></summary>
+<div class="song-body"><div class="view" id="song-desperado">
+<section class="song">
+<div class="song-header">
+<div class="song-title">Desperado</div>
+<div class="song-artist">Eagles</div>
+<div class="song-meta">
+<span class="tag key">Key: G</span>
+<span class="tag">Tuning: Standard</span>
+</div>
+</div>
+<div class="song-content">
+<span class="section-label">[Verse 1]</span>
+<p class="lyric-line">Desper<span class="c" data-chord="G">ado,</span> <span class="c" data-chord="G7">why</span> don't you
+<span class="c" data-chord="C">come</span> to your <span class="c" data-chord="Cm">senses?</span></p>
+<p class="lyric-line">You been <span class="c" data-chord="G">out</span> ridin' <span class="c" data-chord="Em7">fences</span> for <span class="c" data-chord="A7">so</span> long <span class="c" data-chord="D7">now</span></p>
+<p class="lyric-line">Oh, you're a <span class="c" data-chord="G">hard</span> one, <span class="c" data-chord="G7">I</span> know that
+<span class="c" data-chord="C">you</span> got your <span class="c" data-chord="Cm">reasons</span></p>
+<p class="lyric-line">These <span class="c" data-chord="G">things</span> that are
+<span class="c" data-chord="B7">pleas</span>in' you can <span class="c" data-chord="Em7">hurt</span>
+you some<span class="c" data-chord="A7">how</span> <span class="c" data-chord="D7">&nbsp;</span></p>
+
+<span class="section-label">[Bridge]</span>
+<p class="lyric-line">Don't you <span class="c" data-chord="G">draw</span> the queen of
+<span class="c" data-chord="Em">diamonds,</span> boy, she'll <span class="c" data-chord="Bm">beat</span> you if she's
+<span class="c" data-chord="C">able</span></p>
+<p class="lyric-line">You know the <span class="c" data-chord="Em7">queen</span> of hearts is <span class="c" data-chord="C">always</span>
+your best <span class="c" data-chord="G">bet</span> <span class="c" data-chord="D">&nbsp;</span></p>
+<p class="lyric-line">Now it <span class="c" data-chord="Em">seems</span> to me some
+<span class="c" data-chord="Bm">fine</span>
+things have been <span class="c" data-chord="C">laid</span> upon your <span class="c" data-chord="G">table</span></p>
+<p class="lyric-line">But you <span class="c" data-chord="Em">only</span> want the
+<span class="c" data-chord="A7">ones</span> you can't <span class="c" data-chord="Am7">get</span>
+<span class="c" data-chord="D">&nbsp;</span> <span class="c" data-chord="D7">&nbsp;</span></p>
+
+<span class="section-label">[Verse 2]</span>
+<p class="lyric-line">Desper<span class="c" data-chord="G">ado,</span>
+oh you ain't <span class="c" data-chord="G7">gettin'</span> no
+<span class="c" data-chord="C">younger</span></p>
+<p class="lyric-line">Your <span class="c" data-chord="Cm">pain</span> and your
+<span class="c" data-chord="G">hunger,</span>
+they're <span class="c" data-chord="Em7">drivin'</span> you <span class="c" data-chord="A7">home</span> <span class="c" data-chord="D7">&nbsp;</span></p>
+<p class="lyric-line">And <span class="c" data-chord="G">freedom,</span>
+well, that's just <span class="c" data-chord="G7">some</span> people <span class="c" data-chord="C">talkin'</span></p>
+<p class="lyric-line">Your <span class="c" data-chord="Cm">prison</span> is
+<span class="c" data-chord="G">walkin'</span>
+through this <span class="c" data-chord="B7">world</span> all a<span class="c" data-chord="Em7">lone</span> <span class="c" data-chord="A7">&nbsp;</span>
+<span class="c" data-chord="D7">&nbsp;</span></p>
+
+<span class="section-label">[Bridge]</span>
+<p class="lyric-line">Don't your <span class="c" data-chord="Em">feet</span> get cold in the <span class="c" data-chord="Bm">wintertime?</span></p>
+<p class="lyric-line">The <span class="c" data-chord="C">sky</span> won't snow and
+<span class="c" data-chord="G">the</span> sun won't shine</p>
+<p class="lyric-line">It's <span class="c" data-chord="Em7">hard</span> to tell the
+<span class="c" data-chord="C">nighttime</span>
+from the <span class="c" data-chord="G">day</span>
+<span class="c" data-chord="D">&nbsp;</span></p>
+<p class="lyric-line">You're <span class="c" data-chord="Em">losin'</span>
+all your <span class="c" data-chord="Bm">highs and lows</span></p>
+<p class="lyric-line">Ain't it <span class="c" data-chord="C">funny</span>
+how the <span class="c" data-chord="G">feelin'</span> goes a<span class="c" data-chord="Am7">way?</span> <span class="c" data-chord="D">&nbsp;</span></p>
+
+<span class="section-label">[Verse 3]</span>
+<p class="lyric-line">Desper<span class="c" data-chord="G">ado,</span>
+why don't you <span class="c" data-chord="G7">come</span> to your <span class="c" data-chord="C">senses?</span></p>
+<p class="lyric-line">Come <span class="c" data-chord="Cm">down</span> from your
+<span class="c" data-chord="G">fences,</span>
+<span class="c" data-chord="D">open</span> the
+<span class="c" data-chord="Em">gate</span>
+<span class="c" data-chord="A7">&nbsp;</span> <span class="c" data-chord="D7">&nbsp;</span></p>
+<p class="lyric-line">It may be <span class="c" data-chord="G">rainin',</span> <span class="c" data-chord="G7">but</span> there's a <span class="c" data-chord="C">rainbow</span> above you</p>
+<p class="lyric-line">You better <span class="c" data-chord="Cm">let</span> some<span class="c" data-chord="G">body</span> <span class="c" data-chord="B7">love</span> you <span class="c" data-chord="Em">&nbsp;</span>
+<span class="c" data-chord="C">&nbsp;</span> <span class="c" data-chord="G">&nbsp;</span>
+<span class="c" data-chord="Am7">&nbsp;</span></p>
+<p class="lyric-line">You better <span class="c" data-chord="G">let</span> some<span class="c" data-chord="B7">body</span> <span class="c" data-chord="Em">love</span> you be<span class="c" data-chord="Am7">fore</span>
+it's <span class="c" data-chord="D7">too</span>
+<span class="c" data-chord="G">late</span></p>
+</div>
+</section>
+</div></div>
+</details>
+
+<details class="song-card" data-title="thunder road" data-artist="bruce springsteen">
+<summary><div class="song-title-line"><strong>Thunder Road</strong><span>Bruce Springsteen</span></div></summary>
+<div class="song-body"><div class="view" id="song-thunder-road">
+<section class="song">
+<div class="song-header">
+<div class="song-title">Thunder Road</div>
+<div class="song-artist">Bruce Springsteen</div>
+<div class="song-meta">
+<span class="tag key">Key: E</span>
+<span class="tag">Tuning: Standard</span>
+</div>
+</div>
+<div class="song-content">
+<span class="section-label">[Intro]</span>
+<span class="chord-line">E  A E  A</span>
+
+<span class="section-label">[Verse 1]</span>
+<p class="lyric-line">The screen door
+<span class="c" data-chord="E">slams,</span>
+Mary's dress <span class="c" data-chord="A">waves</span></p>
+<p class="lyric-line">Like a vision she
+<span class="c" data-chord="E">dances</span>
+across the <span class="c" data-chord="A">porch</span></p>
+<p class="lyric-line">As the radio <span class="c" data-chord="E">plays</span></p>
+<p class="lyric-line">Roy Orbison singing for the <span class="c" data-chord="A">lonely</span></p>
+<p class="lyric-line">Hey, that's <span class="c" data-chord="E">me</span> and I want you only</p>
+<p class="lyric-line">Don't turn me home
+<span class="c" data-chord="A">again,</span></p>
+<p class="lyric-line">I just can't face myself alone <span class="c" data-chord="B">again</span></p>
+
+<span class="section-label">[Verse 2]</span>
+<p class="lyric-line">Don't run back
+<span class="c" data-chord="E">inside,</span>
+darling, you know just what I'm <span class="c" data-chord="A">here</span> for</p>
+<p class="lyric-line">So you're <span class="c" data-chord="E">scared</span> and you're thinking that maybe we ain't that <span class="c" data-chord="A">young</span>
+anymore</p>
+<p class="lyric-line">Show a little <span class="c" data-chord="E">faith,</span>
+there's magic in the <span class="c" data-chord="A">night</span></p>
+<p class="lyric-line">You ain't a beauty, but hey, you're <span class="c" data-chord="E">alright</span></p>
+<p class="lyric-line">Oh and that's <span class="c" data-chord="A">alright</span> with
+<span class="c" data-chord="B">me</span></p>
+
+<span class="section-label">[Verse 3]</span>
+<p class="lyric-line">You can hide <span class="c" data-chord="A">'neath</span> your covers and study your <span class="c" data-chord="E">pain</span></p>
+<p class="lyric-line">Make crosses from your
+<span class="c" data-chord="A">lovers,</span>
+throw roses in the <span class="c" data-chord="E">rain</span></p>
+<p class="lyric-line">Waste your summer praying in vain</p>
+<p class="lyric-line">For a savior to rise from these <span class="c" data-chord="A">streets</span></p>
+<p class="lyric-line">Well now I'm no
+<span class="c" data-chord="E">hero,</span>
+that's understood</p>
+<p class="lyric-line">All the redemption I can offer, <span class="c" data-chord="A">girl,</span> is beneath this dirty hood</p>
+<p class="lyric-line">With a chance to make it good somehow</p>
+<p class="lyric-line">Hey, what else can we do now?</p>
+<p class="lyric-line">Except roll down the window and let the wind blow back your <span class="c" data-chord="B">hair</span></p>
+
+<span class="section-label">[Chorus]</span>
+<p class="lyric-line">Well the <span class="c" data-chord="E">night's</span> busting open, these two lanes will <span class="c" data-chord="A">take</span> us anywhere</p>
+<p class="lyric-line">We got one last chance to make it <span class="c" data-chord="E">real</span></p>
+<p class="lyric-line">To trade in these wings on some <span class="c" data-chord="A">wheels</span></p>
+<p class="lyric-line">Climb in back, heaven's waiting on down the <span class="c" data-chord="E">tracks</span></p>
+<p class="lyric-line">Oh, come take my
+<span class="c" data-chord="A">hand,</span></p>
+<p class="lyric-line">We're riding out tonight to case the promised <span class="c" data-chord="E">land</span></p>
+<p class="lyric-line">Oh, <span class="c" data-chord="A">Thunder</span> Road, oh Thunder Road, oh <span class="c" data-chord="E">Thunder</span> Road</p>
+<p class="lyric-line">Lying out there like a
+<span class="c" data-chord="A">killer</span> in the sun</p>
+<p class="lyric-line">Hey I know it's late, we can make it if we <span class="c" data-chord="B">run</span></p>
+<p class="lyric-line">Oh, <span class="c" data-chord="A">Thunder</span> Road, sit tight, take hold, Thunder <span class="c" data-chord="E">Road</span></p>
+</div>
+</section>
+</div></div>
+</details>
+</div>
+<script>
+(function(){ var input = document.getElementById('search-input'); var songs = document.querySelectorAll('.song-card'); function filterSongs() { var q = (input.value || '').toLowerCase().trim(); songs.forEach(function(song){ var text = (song.getAttribute('data-title') + ' ' + song.getAttribute('data-artist')).toLowerCase(); var match = !q || text.indexOf(q) !== -1; song.classList.toggle('hidden-song', !match); }); } input.addEventListener('input', filterSongs, {passive:true}); })();
+</script>
+</body>
+</html>
